@@ -1,0 +1,19 @@
+
+#thpcd_USB_OTG_HS.Instance = USB_OTG_HS;
+#thpcd_USB_OTG_HS.Init.dev_endpoints = 6;
+#thpcd_USB_OTG_HS.Init.speed = PCD_SPEED_FULL;
+#thpcd_USB_OTG_HS.Init.dma_enable = DISABLE;
+#thpcd_USB_OTG_HS.Init.ep0_mps = DEP0CTL_MPS_64;
+#thpcd_USB_OTG_HS.Init.phy_itface = USB_OTG_EMBEDDED_PHY;
+#thpcd_USB_OTG_HS.Init.Sof_enable = DISABLE;
+#thpcd_USB_OTG_HS.Init.low_power_enable = DISABLE;
+#thpcd_USB_OTG_HS.Init.lpm_enable = DISABLE;
+#thpcd_USB_OTG_HS.Init.vbus_sensing_enable = DISABLE;
+#thpcd_USB_OTG_HS.Init.use_dedicated_ep1 = DISABLE;
+#thpcd_USB_OTG_HS.Init.use_external_vbus = DISABLE;
+#tif (HAL_PCD_Init(&hpcd_USB_OTG_HS) != HAL_OK)
+#t{
+#t#t_Error_Handler(__FILE__, __LINE__);
+#t}
+#n
+#n

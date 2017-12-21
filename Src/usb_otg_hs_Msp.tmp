@@ -1,0 +1,58 @@
+
+#nvoid HAL_PCD_MspInit(PCD_HandleTypeDef* pcdHandle)
+{
+#tGPIO_InitTypeDef GPIO_InitStruct;
+#tif(pcdHandle->Instance==USB_OTG_HS)
+#t{
+#t/* USER CODE BEGIN USB_OTG_HS_MspInit 0 */
+#n#t/* USER CODE END USB_OTG_HS_MspInit 0 */
+#t
+#t#t/**USB_OTG_HS GPIO Configuration#t#t
+#t#tPB12#t#t ------> USB_OTG_HS_ID
+#t#tPB13#t#t ------> USB_OTG_HS_VBUS
+#t#tPB14#t#t ------> USB_OTG_HS_DM
+#t#tPB15#t#t ------> USB_OTG_HS_DP #n#t#t*/
+#t#tGPIO_InitStruct.Pin = OTG_FS_ID_Pin|OTG_FS_DM_Pin|OTG_FS_DP_Pin;
+#t#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#t#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#t#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#t#tGPIO_InitStruct.Alternate = GPIO_AF12_OTG_HS_FS;
+#t#tHAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+#n
+#t#tGPIO_InitStruct.Pin = VBUS_FS_Pin;
+#t#tGPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+#t#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#t#tHAL_GPIO_Init(VBUS_FS_GPIO_Port, &GPIO_InitStruct);
+#n
+#t#t/* Peripheral clock enable */
+#t#t__HAL_RCC_USB_OTG_HS_CLK_ENABLE();
+#n#t#t/* Peripheral interrupt init */
+#t#tHAL_NVIC_SetPriority(OTG_HS_IRQn, 5, 0);
+#t#tHAL_NVIC_EnableIRQ(OTG_HS_IRQn);
+#t/* USER CODE BEGIN USB_OTG_HS_MspInit 1 */
+#n#t/* USER CODE END USB_OTG_HS_MspInit 1 */
+#t}
+}
+
+#nvoid HAL_PCD_MspDeInit(PCD_HandleTypeDef* pcdHandle)
+{
+#tif(pcdHandle->Instance==USB_OTG_HS)
+#t{
+#t/* USER CODE BEGIN USB_OTG_HS_MspDeInit 0 */
+#n#t/* USER CODE END USB_OTG_HS_MspDeInit 0 */
+#t#t/* Peripheral clock disable */
+#t#t__HAL_RCC_USB_OTG_HS_CLK_DISABLE();
+#t
+#t#t/**USB_OTG_HS GPIO Configuration#t#t
+#t#tPB12#t#t ------> USB_OTG_HS_ID
+#t#tPB13#t#t ------> USB_OTG_HS_VBUS
+#t#tPB14#t#t ------> USB_OTG_HS_DM
+#t#tPB15#t#t ------> USB_OTG_HS_DP #n#t#t*/
+#t#tHAL_GPIO_DeInit(GPIOB, OTG_FS_ID_Pin|VBUS_FS_Pin|OTG_FS_DM_Pin|OTG_FS_DP_Pin);
+#n
+#n#t#t/* Peripheral interrupt Deinit*/
+#t#tHAL_NVIC_DisableIRQ(OTG_HS_IRQn);#n
+#t/* USER CODE BEGIN USB_OTG_HS_MspDeInit 1 */
+#n#t/* USER CODE END USB_OTG_HS_MspDeInit 1 */
+#t}
+}

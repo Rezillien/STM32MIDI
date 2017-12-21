@@ -1,0 +1,1 @@
+C:\gcc_toolchain\6_2017-q1-update\bin\arm-none-eabi-gdb.exe "build/SuperDuperProdzekt.elf"

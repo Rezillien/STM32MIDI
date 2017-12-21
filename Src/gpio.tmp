@@ -1,0 +1,255 @@
+
+#n/** Configure pins as #n #t#t #t* Analog #n #t#t #t* Input #n #t#t #t* Output#n #t#t #t* EVENT_OUT#n #t#t #t* EXTI
+#t#t PF0#t ------> FMC_A0
+#t#t PF1#t ------> FMC_A1
+#t#t PF2#t ------> FMC_A2
+#t#t PF3#t ------> FMC_A3
+#t#t PF4#t ------> FMC_A4
+#t#t PF5#t ------> FMC_A5
+#t#t PF7#t ------> SPI5_SCK
+#t#t PF8#t ------> SPI5_MISO
+#t#t PF9#t ------> SPI5_MOSI
+#t#t PF10#t ------> LTDC_DE
+#t#t PC0#t ------> FMC_SDNWE
+#t#t PA3#t ------> LTDC_B5
+#t#t PA4#t ------> LTDC_VSYNC
+#t#t PA6#t ------> LTDC_G2
+#t#t PB0#t ------> LTDC_R3
+#t#t PB1#t ------> LTDC_R6
+#t#t PF11#t ------> FMC_SDNRAS
+#t#t PF12#t ------> FMC_A6
+#t#t PF13#t ------> FMC_A7
+#t#t PF14#t ------> FMC_A8
+#t#t PF15#t ------> FMC_A9
+#t#t PG0#t ------> FMC_A10
+#t#t PG1#t ------> FMC_A11
+#t#t PE7#t ------> FMC_D4_DA4
+#t#t PE8#t ------> FMC_D5_DA5
+#t#t PE9#t ------> FMC_D6_DA6
+#t#t PE10#t ------> FMC_D7_DA7
+#t#t PE11#t ------> FMC_D8_DA8
+#t#t PE12#t ------> FMC_D9_DA9
+#t#t PE13#t ------> FMC_D10_DA10
+#t#t PE14#t ------> FMC_D11_DA11
+#t#t PE15#t ------> FMC_D12_DA12
+#t#t PB10#t ------> LTDC_G4
+#t#t PB11#t ------> LTDC_G5
+#t#t PD8#t ------> FMC_D13_DA13
+#t#t PD9#t ------> FMC_D14_DA14
+#t#t PD10#t ------> FMC_D15_DA15
+#t#t PD14#t ------> FMC_D0_DA0
+#t#t PD15#t ------> FMC_D1_DA1
+#t#t PG4#t ------> FMC_A14_BA0
+#t#t PG5#t ------> FMC_A15_BA1
+#t#t PG6#t ------> LTDC_R7
+#t#t PG7#t ------> LTDC_CLK
+#t#t PG8#t ------> FMC_SDCLK
+#t#t PC6#t ------> LTDC_HSYNC
+#t#t PC7#t ------> LTDC_G6
+#t#t PC9#t ------> I2C3_SDA
+#t#t PA8#t ------> I2C3_SCL
+#t#t PA11#t ------> LTDC_R4
+#t#t PA12#t ------> LTDC_R5
+#t#t PC10#t ------> LTDC_R2
+#t#t PD0#t ------> FMC_D2_DA2
+#t#t PD1#t ------> FMC_D3_DA3
+#t#t PD3#t ------> LTDC_G7
+#t#t PD6#t ------> LTDC_B2
+#t#t PG10#t ------> LTDC_G3
+#t#t PG11#t ------> LTDC_B3
+#t#t PG12#t ------> LTDC_B4
+#t#t PG15#t ------> FMC_SDNCAS
+#t#t PB5#t ------> FMC_SDCKE1
+#t#t PB6#t ------> FMC_SDNE1
+#t#t PB8#t ------> LTDC_B6
+#t#t PB9#t ------> LTDC_B7
+#t#t PE0#t ------> FMC_NBL0
+#t#t PE1#t ------> FMC_NBL1
+*/
+static void MX_GPIO_Init(void)
+{
+#n
+#tGPIO_InitTypeDef GPIO_InitStruct;
+#n#t/* GPIO Ports Clock Enable */
+#t__HAL_RCC_GPIOC_CLK_ENABLE();
+#t__HAL_RCC_GPIOF_CLK_ENABLE();
+#t__HAL_RCC_GPIOH_CLK_ENABLE();
+#t__HAL_RCC_GPIOA_CLK_ENABLE();
+#t__HAL_RCC_GPIOB_CLK_ENABLE();
+#t__HAL_RCC_GPIOG_CLK_ENABLE();
+#t__HAL_RCC_GPIOE_CLK_ENABLE();
+#t__HAL_RCC_GPIOD_CLK_ENABLE();
+#n#t/*Configure GPIO pin Output Level */
+#tHAL_GPIO_WritePin(GPIOC, NCS_MEMS_SPI_Pin|CSX_Pin|OTG_FS_PSO_Pin, GPIO_PIN_RESET);
+#n#t/*Configure GPIO pin Output Level */
+#tHAL_GPIO_WritePin(ACP_RST_GPIO_Port, ACP_RST_Pin, GPIO_PIN_RESET);
+#n#t/*Configure GPIO pin Output Level */
+#tHAL_GPIO_WritePin(GPIOD, RDX_Pin|WRX_DCX_Pin, GPIO_PIN_RESET);
+#n#t/*Configure GPIO pin Output Level */
+#tHAL_GPIO_WritePin(GPIOG, LD3_Pin|LD4_Pin, GPIO_PIN_RESET);
+#n#t/*Configure GPIO pins : A0_Pin A1_Pin A2_Pin A3_Pin #n#t#t#t#t#t#t#t#t#t#t#t#t#t A4_Pin A5_Pin SDNRAS_Pin A6_Pin #n#t#t#t#t#t#t#t#t#t#t#t#t#t A7_Pin A8_Pin A9_Pin */
+#tGPIO_InitStruct.Pin = A0_Pin|A1_Pin|A2_Pin|A3_Pin #n#t#t#t#t#t#t#t#t#t#t#t#t#t|A4_Pin|A5_Pin|SDNRAS_Pin|A6_Pin #n#t#t#t#t#t#t#t#t#t#t#t#t#t|A7_Pin|A8_Pin|A9_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+#tGPIO_InitStruct.Alternate = GPIO_AF12_FMC;
+#tHAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : SPI5_SCK_Pin SPI5_MISO_Pin SPI5_MOSI_Pin */
+#tGPIO_InitStruct.Pin = SPI5_SCK_Pin|SPI5_MISO_Pin|SPI5_MOSI_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#tGPIO_InitStruct.Alternate = GPIO_AF5_SPI5;
+#tHAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
+#n#t/*Configure GPIO pin : ENABLE_Pin */
+#tGPIO_InitStruct.Pin = ENABLE_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#tGPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
+#tHAL_GPIO_Init(ENABLE_GPIO_Port, &GPIO_InitStruct);
+#n#t/*Configure GPIO pin : SDNWE_Pin */
+#tGPIO_InitStruct.Pin = SDNWE_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+#tGPIO_InitStruct.Alternate = GPIO_AF12_FMC;
+#tHAL_GPIO_Init(SDNWE_GPIO_Port, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : NCS_MEMS_SPI_Pin CSX_Pin OTG_FS_PSO_Pin */
+#tGPIO_InitStruct.Pin = NCS_MEMS_SPI_Pin|CSX_Pin|OTG_FS_PSO_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#tHAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : B1_Pin MEMS_INT1_Pin MEMS_INT2_Pin TP_INT1_Pin */
+#tGPIO_InitStruct.Pin = B1_Pin|MEMS_INT1_Pin|MEMS_INT2_Pin|TP_INT1_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_EVT_RISING;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tHAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : B5_Pin VSYNC_Pin G2_Pin R4_Pin #n#t#t#t#t#t#t#t#t#t#t#t#t#t R5_Pin */
+#tGPIO_InitStruct.Pin = B5_Pin|VSYNC_Pin|G2_Pin|R4_Pin #n#t#t#t#t#t#t#t#t#t#t#t#t#t|R5_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#tGPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
+#tHAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+#n#t/*Configure GPIO pin : ACP_RST_Pin */
+#tGPIO_InitStruct.Pin = ACP_RST_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#tHAL_GPIO_Init(ACP_RST_GPIO_Port, &GPIO_InitStruct);
+#n#t/*Configure GPIO pin : OTG_FS_OC_Pin */
+#tGPIO_InitStruct.Pin = OTG_FS_OC_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_EVT_RISING;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tHAL_GPIO_Init(OTG_FS_OC_GPIO_Port, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : R3_Pin R6_Pin */
+#tGPIO_InitStruct.Pin = R3_Pin|R6_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#tGPIO_InitStruct.Alternate = GPIO_AF9_LTDC;
+#tHAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+#n#t/*Configure GPIO pin : BOOT1_Pin */
+#tGPIO_InitStruct.Pin = BOOT1_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tHAL_GPIO_Init(BOOT1_GPIO_Port, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : A10_Pin A11_Pin BA0_Pin BA1_Pin #n#t#t#t#t#t#t#t#t#t#t#t#t#t SDCLK_Pin SDNCAS_Pin */
+#tGPIO_InitStruct.Pin = A10_Pin|A11_Pin|BA0_Pin|BA1_Pin #n#t#t#t#t#t#t#t#t#t#t#t#t#t|SDCLK_Pin|SDNCAS_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+#tGPIO_InitStruct.Alternate = GPIO_AF12_FMC;
+#tHAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : D4_Pin D5_Pin D6_Pin D7_Pin #n#t#t#t#t#t#t#t#t#t#t#t#t#t D8_Pin D9_Pin D10_Pin D11_Pin #n#t#t#t#t#t#t#t#t#t#t#t#t#t D12_Pin NBL0_Pin NBL1_Pin */
+#tGPIO_InitStruct.Pin = D4_Pin|D5_Pin|D6_Pin|D7_Pin #n#t#t#t#t#t#t#t#t#t#t#t#t#t|D8_Pin|D9_Pin|D10_Pin|D11_Pin #n#t#t#t#t#t#t#t#t#t#t#t#t#t|D12_Pin|NBL0_Pin|NBL1_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+#tGPIO_InitStruct.Alternate = GPIO_AF12_FMC;
+#tHAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : G4_Pin G5_Pin B6_Pin B7_Pin */
+#tGPIO_InitStruct.Pin = G4_Pin|G5_Pin|B6_Pin|B7_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#tGPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
+#tHAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : D13_Pin D14_Pin D15_Pin D0_Pin #n#t#t#t#t#t#t#t#t#t#t#t#t#t D1_Pin D2_Pin D3_Pin */
+#tGPIO_InitStruct.Pin = D13_Pin|D14_Pin|D15_Pin|D0_Pin #n#t#t#t#t#t#t#t#t#t#t#t#t#t|D1_Pin|D2_Pin|D3_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+#tGPIO_InitStruct.Alternate = GPIO_AF12_FMC;
+#tHAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+#n#t/*Configure GPIO pin : TE_Pin */
+#tGPIO_InitStruct.Pin = TE_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tHAL_GPIO_Init(TE_GPIO_Port, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : RDX_Pin WRX_DCX_Pin */
+#tGPIO_InitStruct.Pin = RDX_Pin|WRX_DCX_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#tHAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : R7_Pin DOTCLK_Pin B3_Pin */
+#tGPIO_InitStruct.Pin = R7_Pin|DOTCLK_Pin|B3_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#tGPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
+#tHAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : HSYNC_Pin G6_Pin R2_Pin */
+#tGPIO_InitStruct.Pin = HSYNC_Pin|G6_Pin|R2_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#tGPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
+#tHAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+#n#t/*Configure GPIO pin : I2C3_SDA_Pin */
+#tGPIO_InitStruct.Pin = I2C3_SDA_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
+#tGPIO_InitStruct.Pull = GPIO_PULLUP;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#tGPIO_InitStruct.Alternate = GPIO_AF4_I2C3;
+#tHAL_GPIO_Init(I2C3_SDA_GPIO_Port, &GPIO_InitStruct);
+#n#t/*Configure GPIO pin : I2C3_SCL_Pin */
+#tGPIO_InitStruct.Pin = I2C3_SCL_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
+#tGPIO_InitStruct.Pull = GPIO_PULLUP;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#tGPIO_InitStruct.Alternate = GPIO_AF4_I2C3;
+#tHAL_GPIO_Init(I2C3_SCL_GPIO_Port, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : G7_Pin B2_Pin */
+#tGPIO_InitStruct.Pin = G7_Pin|B2_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#tGPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
+#tHAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : G3_Pin B4_Pin */
+#tGPIO_InitStruct.Pin = G3_Pin|B4_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#tGPIO_InitStruct.Alternate = GPIO_AF9_LTDC;
+#tHAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : LD3_Pin LD4_Pin */
+#tGPIO_InitStruct.Pin = LD3_Pin|LD4_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+#tHAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
+#n#t/*Configure GPIO pins : SDCKE1_Pin SDNE1_Pin */
+#tGPIO_InitStruct.Pin = SDCKE1_Pin|SDNE1_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+#tGPIO_InitStruct.Alternate = GPIO_AF12_FMC;
+#tHAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+#n
+}
+#n
