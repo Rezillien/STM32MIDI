@@ -78,6 +78,7 @@ void StartDefaultTask(void const * argument);
 static void print_chr(char);
 ssize_t _write_r(struct _reent*, int, const void*, size_t);
 int8_t CDC_Receive_FS (uint8_t*, uint32_t*);
+char readkey(void);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
@@ -660,6 +661,19 @@ ssize_t _write_r(struct _reent *r, int fd, const void *ptr, size_t len)
     while(cntr--)
         print_chr(*pTemp++);
     return len;
+}
+
+char readkey(void)
+{
+    uint8_t rxed;
+    HAL_StatusTypeDef res =
+        HAL_UART_Receive(&huart1,&rxed,1,1);
+
+
+    if(res == HAL_OK)
+        return rxed;
+    else
+        return 0;
 }
 
 #ifdef USE_FULL_ASSERT
