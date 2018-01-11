@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc1464yV.s 			page 1
+ARM GAS  /tmp/cc6K6OOM.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * <h2><center>&copy; COPYRIGHT(c) 2017 STMicroelectronics</center></h2>
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   *
   31:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * Redistribution and use in source and binary forms, with or without modification,
-ARM GAS  /tmp/cc1464yV.s 			page 2
+ARM GAS  /tmp/cc6K6OOM.s 			page 2
 
 
   32:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * are permitted provided that the following conditions are met:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** @verbatim    
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****  ===============================================================================
   88:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****               ##### Initialization/de-initialization functions #####
-ARM GAS  /tmp/cc1464yV.s 			page 3
+ARM GAS  /tmp/cc6K6OOM.s 			page 3
 
 
   89:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****  ===============================================================================
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
   59              		.loc 1 111 0
   60 0024 7B68     		ldr	r3, [r7, #4]
   61 0026 DB68     		ldr	r3, [r3, #12]
-ARM GAS  /tmp/cc1464yV.s 			page 4
+ARM GAS  /tmp/cc6K6OOM.s 			page 4
 
 
   62 0028 23F48403 		bic	r3, r3, #4325376
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  131:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     USBx->GCCFG = USB_OTG_GCCFG_PWRDWN;
   97              		.loc 1 131 0
   98 006c 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/cc1464yV.s 			page 5
+ARM GAS  /tmp/cc6K6OOM.s 			page 5
 
 
   99 006e 4FF48032 		mov	r2, #65536
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  144              		.global	USB_EnableGlobalInt
  145              		.syntax unified
  146              		.thumb
-ARM GAS  /tmp/cc1464yV.s 			page 6
+ARM GAS  /tmp/cc6K6OOM.s 			page 6
 
 
  147              		.thumb_func
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  190              		.cfi_endproc
  191              	.LFE125:
  193              		.section	.text.USB_DisableGlobalInt,"ax",%progbits
-ARM GAS  /tmp/cc1464yV.s 			page 7
+ARM GAS  /tmp/cc6K6OOM.s 			page 7
 
 
  194              		.align	1
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  236 001c 5DF8047B 		ldr	r7, [sp], #4
  237              	.LCFI19:
  238              		.cfi_restore 7
-ARM GAS  /tmp/cc1464yV.s 			page 8
+ARM GAS  /tmp/cc6K6OOM.s 			page 8
 
 
  239              		.cfi_def_cfa_offset 0
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  279 0018 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
  280 001a 012B     		cmp	r3, #1
  281 001c 06D1     		bne	.L12
-ARM GAS  /tmp/cc1464yV.s 			page 9
+ARM GAS  /tmp/cc6K6OOM.s 			page 9
 
 
  183:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   {
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  327              	USB_DevInit:
  328              	.LFB128:
  194:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** 
-ARM GAS  /tmp/cc1464yV.s 			page 10
+ARM GAS  /tmp/cc6K6OOM.s 			page 10
 
 
  195:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** /**
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  355 0018 002B     		cmp	r3, #0
  356 001a 06D1     		bne	.L16
  223:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   {
-ARM GAS  /tmp/cc1464yV.s 			page 11
+ARM GAS  /tmp/cc6K6OOM.s 			page 11
 
 
  224:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     USBx->GCCFG |= USB_OTG_GCCFG_NOVBUSSENS;
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  393 005e 04D1     		bne	.L19
  242:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     {      
  243:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****       /* Set High speed phy */
-ARM GAS  /tmp/cc1464yV.s 			page 12
+ARM GAS  /tmp/cc6K6OOM.s 			page 12
 
 
  244:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****       USB_SetDevSpeed (USBx , USB_OTG_SPEED_HIGH);
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  427 009c 1A46     		mov	r2, r3
  428 009e 0023     		movs	r3, #0
  429 00a0 5361     		str	r3, [r2, #20]
-ARM GAS  /tmp/cc1464yV.s 			page 13
+ARM GAS  /tmp/cc6K6OOM.s 			page 13
 
 
  265:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   USBx_DEVICE->DAINT = 0xFFFFFFFFU;
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  472 00f6 1344     		add	r3, r3, r2
  473 00f8 03F51063 		add	r3, r3, #2304
  474 00fc 1A46     		mov	r2, r3
-ARM GAS  /tmp/cc1464yV.s 			page 14
+ARM GAS  /tmp/cc6K6OOM.s 			page 14
 
 
  475 00fe 0023     		movs	r3, #0
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  518 0148 03F00043 		and	r3, r3, #-2147483648
  519 014c B3F1004F 		cmp	r3, #-2147483648
  520 0150 0AD1     		bne	.L27
-ARM GAS  /tmp/cc1464yV.s 			page 15
+ARM GAS  /tmp/cc6K6OOM.s 			page 15
 
 
  286:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     {
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  564              	.L26:
  283:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   {
  565              		.loc 1 283 0 is_stmt 0 discriminator 1
-ARM GAS  /tmp/cc1464yV.s 			page 16
+ARM GAS  /tmp/cc6K6OOM.s 			page 16
 
 
  566 01a4 FA69     		ldr	r2, [r7, #28]
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  605              		.loc 1 310 0
  606 01f8 7B68     		ldr	r3, [r7, #4]
  607 01fa 0022     		movs	r2, #0
-ARM GAS  /tmp/cc1464yV.s 			page 17
+ARM GAS  /tmp/cc6K6OOM.s 			page 17
 
 
  608 01fc 9A61     		str	r2, [r3, #24]
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  331:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** 
  332:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   if (cfg.vbus_sensing_enable == ENABLE)
  642              		.loc 1 332 0
-ARM GAS  /tmp/cc1464yV.s 			page 18
+ARM GAS  /tmp/cc6K6OOM.s 			page 18
 
 
  643 0236 7B6C     		ldr	r3, [r7, #68]
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  340:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** 
  341:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** /**
  342:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @brief  USB_OTG_FlushTxFifo : Flush a Tx FIFO
-ARM GAS  /tmp/cc1464yV.s 			page 19
+ARM GAS  /tmp/cc6K6OOM.s 			page 19
 
 
  343:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @param  USBx  Selected device
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  729 002a 06E0     		b	.L39
  730              	.L38:
  360:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     }
-ARM GAS  /tmp/cc1464yV.s 			page 20
+ARM GAS  /tmp/cc6K6OOM.s 			page 20
 
 
  361:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   }
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  773              		@ args = 0, pretend = 0, frame = 16
  774              		@ frame_needed = 1, uses_anonymous_args = 0
  775              		@ link register save eliminated.
-ARM GAS  /tmp/cc1464yV.s 			page 21
+ARM GAS  /tmp/cc6K6OOM.s 			page 21
 
 
  776 0000 80B4     		push	{r7}
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  389:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** }
  816              		.loc 1 389 0
  817 0032 1846     		mov	r0, r3
-ARM GAS  /tmp/cc1464yV.s 			page 22
+ARM GAS  /tmp/cc6K6OOM.s 			page 22
 
 
  818 0034 1437     		adds	r7, r7, #20
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  859 0004 00AF     		add	r7, sp, #0
  860              	.LCFI47:
  861              		.cfi_def_cfa_register 7
-ARM GAS  /tmp/cc1464yV.s 			page 23
+ARM GAS  /tmp/cc6K6OOM.s 			page 23
 
 
  862 0006 7860     		str	r0, [r7, #4]
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  419:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** {
  904              		.loc 1 419 0
  905              		.cfi_startproc
-ARM GAS  /tmp/cc1464yV.s 			page 24
+ARM GAS  /tmp/cc6K6OOM.s 			page 24
 
 
  906              		@ args = 0, pretend = 0, frame = 16
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  428:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   {
  429:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     speed = USB_OTG_SPEED_FULL;
  951              		.loc 1 429 0
-ARM GAS  /tmp/cc1464yV.s 			page 25
+ARM GAS  /tmp/cc6K6OOM.s 			page 25
 
 
  952 0042 0323     		movs	r3, #3
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  442:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @param  ep pointer to endpoint structure
  443:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @retval HAL status
  444:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   */
-ARM GAS  /tmp/cc1464yV.s 			page 26
+ARM GAS  /tmp/cc6K6OOM.s 			page 26
 
 
  445:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** HAL_StatusTypeDef USB_ActivateEndpoint(USB_OTG_GlobalTypeDef *USBx, USB_OTG_EPTypeDef *ep)
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1043 0048 5CD1     		bne	.L60
  452:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     {
  453:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****       USBx_INEP(ep->num)->DIEPCTL |= ((ep->maxpacket & USB_OTG_DIEPCTL_MPSIZ ) | (ep->type << 18U) 
-ARM GAS  /tmp/cc1464yV.s 			page 27
+ARM GAS  /tmp/cc6K6OOM.s 			page 27
 
 
  1044              		.loc 1 453 0
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1091 00ac 1343     		orrs	r3, r3, r2
  1092 00ae CB61     		str	r3, [r1, #28]
  460:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****      
-ARM GAS  /tmp/cc1464yV.s 			page 28
+ARM GAS  /tmp/cc6K6OOM.s 			page 28
 
 
  461:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     if (((USBx_OUTEP(ep->num)->DOEPCTL) & USB_OTG_DOEPCTL_USBAEP) == 0U)
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1139              	.LCFI61:
  1140              		.cfi_def_cfa_register 13
  1141              		@ sp needed
-ARM GAS  /tmp/cc1464yV.s 			page 29
+ARM GAS  /tmp/cc6K6OOM.s 			page 29
 
 
  1142 010c 5DF8047B 		ldr	r7, [sp], #4
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1184 0014 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  1185 0016 5A01     		lsls	r2, r3, #5
  1186 0018 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/cc1464yV.s 			page 30
+ARM GAS  /tmp/cc6K6OOM.s 			page 30
 
 
  1187 001a 1344     		add	r3, r3, r2
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1233 007c 1343     		orrs	r3, r3, r2
  490:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****         ((ep->num) << 22U) | (USB_OTG_DIEPCTL_SD0PID_SEVNFRM) | (USB_OTG_DIEPCTL_USBAEP)); 
  1234              		.loc 1 490 0
-ARM GAS  /tmp/cc1464yV.s 			page 31
+ARM GAS  /tmp/cc6K6OOM.s 			page 31
 
 
  1235 007e 3A68     		ldr	r2, [r7]
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1280 00da 1344     		add	r3, r3, r2
  1281 00dc 03F53063 		add	r3, r3, #2816
  1282 00e0 1846     		mov	r0, r3
-ARM GAS  /tmp/cc1464yV.s 			page 32
+ARM GAS  /tmp/cc6K6OOM.s 			page 32
 
 
  1283 00e2 3B68     		ldr	r3, [r7]
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1330 0140 3A68     		ldr	r2, [r7]
  1331 0142 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
  1332 0144 9205     		lsls	r2, r2, #22
-ARM GAS  /tmp/cc1464yV.s 			page 33
+ARM GAS  /tmp/cc6K6OOM.s 			page 33
 
 
  503:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****       debug |= ((ep->maxpacket & USB_OTG_DOEPCTL_MPSIZ ) | (ep->type << 18U) |\
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1379              	.LFE134:
  1381              		.section	.text.USB_DeactivateEndpoint,"ax",%progbits
  1382              		.align	1
-ARM GAS  /tmp/cc1464yV.s 			page 34
+ARM GAS  /tmp/cc6K6OOM.s 			page 34
 
 
  1383              		.global	USB_DeactivateEndpoint
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1424 0026 3B68     		ldr	r3, [r7]
  1425 0028 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  1426 002a 5A01     		lsls	r2, r3, #5
-ARM GAS  /tmp/cc1464yV.s 			page 35
+ARM GAS  /tmp/cc6K6OOM.s 			page 35
 
 
  1427 002c 7B68     		ldr	r3, [r7, #4]
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  541:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     /*Wait for  EPDISD endpoint disabled interrupt*/ 
  542:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     while ((USBx_INEP(ep->num)->DIEPINT & USB_OTG_DIEPCTL_EPDIS) == USB_OTG_DIEPCTL_EPDIS);
  1466              		.loc 1 542 0
-ARM GAS  /tmp/cc1464yV.s 			page 36
+ARM GAS  /tmp/cc6K6OOM.s 			page 36
 
 
  1467 007a 3B68     		ldr	r3, [r7]
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1508 00d2 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  1509 00d4 5A01     		lsls	r2, r3, #5
  1510 00d6 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/cc1464yV.s 			page 37
+ARM GAS  /tmp/cc6K6OOM.s 			page 37
 
 
  1511 00d8 1344     		add	r3, r3, r2
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  572:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     while ((USBx_OUTEP(ep->num)->DOEPINT & USB_OTG_DOEPINT_OTEPDIS) == USB_OTG_DOEPINT_OTEPDIS);
  1549              		.loc 1 572 0
  1550 0124 3B68     		ldr	r3, [r7]
-ARM GAS  /tmp/cc1464yV.s 			page 38
+ARM GAS  /tmp/cc6K6OOM.s 			page 38
 
 
  1551 0126 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1596              		.cfi_def_cfa_register 13
  1597              		@ sp needed
  1598 017c 80BD     		pop	{r7, pc}
-ARM GAS  /tmp/cc1464yV.s 			page 39
+ARM GAS  /tmp/cc6K6OOM.s 			page 39
 
 
  1599              	.L79:
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  596:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     USBx_INEP(ep->num)->DIEPCTL &= ~USB_OTG_DIEPCTL_USBAEP;  
  1641              		.loc 1 596 0
  1642 0016 3B68     		ldr	r3, [r7]
-ARM GAS  /tmp/cc1464yV.s 			page 40
+ARM GAS  /tmp/cc6K6OOM.s 			page 40
 
 
  1643 0018 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  607:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****       {
  608:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****         return HAL_TIMEOUT;
  1687              		.loc 1 608 0
-ARM GAS  /tmp/cc1464yV.s 			page 41
+ARM GAS  /tmp/cc6K6OOM.s 			page 41
 
 
  1688 0076 0323     		movs	r3, #3
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1724              		.loc 1 626 0
  1725 00c0 3B68     		ldr	r3, [r7]
  1726 00c2 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-ARM GAS  /tmp/cc1464yV.s 			page 42
+ARM GAS  /tmp/cc6K6OOM.s 			page 42
 
 
  1727 00c4 5A01     		lsls	r2, r3, #5
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  638:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****         return HAL_TIMEOUT;
  1770              		.loc 1 638 0
  1771 0120 0323     		movs	r3, #3
-ARM GAS  /tmp/cc1464yV.s 			page 43
+ARM GAS  /tmp/cc6K6OOM.s 			page 43
 
 
  1772 0122 28E0     		b	.L83
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1813              	.L83:
  652:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** 
  653:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** }
-ARM GAS  /tmp/cc1464yV.s 			page 44
+ARM GAS  /tmp/cc6K6OOM.s 			page 44
 
 
  1814              		.loc 1 653 0
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1857 0008 B960     		str	r1, [r7, #8]
  1858 000a 1346     		mov	r3, r2
  1859 000c FB71     		strb	r3, [r7, #7]
-ARM GAS  /tmp/cc1464yV.s 			page 45
+ARM GAS  /tmp/cc6K6OOM.s 			page 45
 
 
  667:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   uint16_t pktcnt = 0U;
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1904 0068 03F51063 		add	r3, r3, #2304
  1905 006c 1B69     		ldr	r3, [r3, #16]
  1906 006e 43F40023 		orr	r3, r3, #524288
-ARM GAS  /tmp/cc1464yV.s 			page 46
+ARM GAS  /tmp/cc6K6OOM.s 			page 46
 
 
  1907 0072 0B61     		str	r3, [r1, #16]
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  1950 00c8 FB68     		ldr	r3, [r7, #12]
  1951 00ca 1344     		add	r3, r3, r2
  1952 00cc 03F51063 		add	r3, r3, #2304
-ARM GAS  /tmp/cc1464yV.s 			page 47
+ARM GAS  /tmp/cc6K6OOM.s 			page 47
 
 
  1953 00d0 1946     		mov	r1, r3
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2005 0142 1344     		add	r3, r3, r2
  2006 0144 03F51063 		add	r3, r3, #2304
  2007 0148 1A69     		ldr	r2, [r3, #16]
-ARM GAS  /tmp/cc1464yV.s 			page 48
+ARM GAS  /tmp/cc6K6OOM.s 			page 48
 
 
  2008 014a BB68     		ldr	r3, [r7, #8]
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2053              		.loc 1 698 0
  2054 01aa FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  2055 01ac 012B     		cmp	r3, #1
-ARM GAS  /tmp/cc1464yV.s 			page 49
+ARM GAS  /tmp/cc6K6OOM.s 			page 49
 
 
  2056 01ae 0BD1     		bne	.L94
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  714:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     if (ep->type == EP_TYPE_ISOC)
  2095              		.loc 1 714 0
  2096 01f6 BB68     		ldr	r3, [r7, #8]
-ARM GAS  /tmp/cc1464yV.s 			page 50
+ARM GAS  /tmp/cc6K6OOM.s 			page 50
 
 
  2097 01f8 DB78     		ldrb	r3, [r3, #3]	@ zero_extendqisi2
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2143              	.L96:
  723:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****       }
  724:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     } 
-ARM GAS  /tmp/cc1464yV.s 			page 51
+ARM GAS  /tmp/cc6K6OOM.s 			page 51
 
 
  725:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2182 02a8 BB68     		ldr	r3, [r7, #8]
  2183 02aa 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  2184 02ac 5A01     		lsls	r2, r3, #5
-ARM GAS  /tmp/cc1464yV.s 			page 52
+ARM GAS  /tmp/cc6K6OOM.s 			page 52
 
 
  2185 02ae FB68     		ldr	r3, [r7, #12]
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2234 0318 1344     		add	r3, r3, r2
  2235 031a 03F53063 		add	r3, r3, #2816
  2236 031e 1A69     		ldr	r2, [r3, #16]
-ARM GAS  /tmp/cc1464yV.s 			page 53
+ARM GAS  /tmp/cc6K6OOM.s 			page 53
 
 
  2237 0320 BB68     		ldr	r3, [r7, #8]
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2285 0380 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  2286 0382 5A01     		lsls	r2, r3, #5
  2287 0384 FB68     		ldr	r3, [r7, #12]
-ARM GAS  /tmp/cc1464yV.s 			page 54
+ARM GAS  /tmp/cc6K6OOM.s 			page 54
 
 
  2288 0386 1344     		add	r3, r3, r2
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2336              	.L102:
  758:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     }
  759:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     
-ARM GAS  /tmp/cc1464yV.s 			page 55
+ARM GAS  /tmp/cc6K6OOM.s 			page 55
 
 
  760:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     if (ep->type == EP_TYPE_ISOC)
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2382 0448 1B68     		ldr	r3, [r3]
  2383 044a 43F08053 		orr	r3, r3, #268435456
  2384 044e 0B60     		str	r3, [r1]
-ARM GAS  /tmp/cc1464yV.s 			page 56
+ARM GAS  /tmp/cc6K6OOM.s 			page 56
 
 
  2385              	.L103:
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  777:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** /**
  778:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @brief  USB_EP0StartXfer : setup and starts a transfer over the EP  0
  779:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @param  USBx  Selected device
-ARM GAS  /tmp/cc1464yV.s 			page 57
+ARM GAS  /tmp/cc6K6OOM.s 			page 57
 
 
  780:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @param  ep pointer to endpoint structure
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2471 0032 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  2472 0034 5A01     		lsls	r2, r3, #5
  2473 0036 FB68     		ldr	r3, [r7, #12]
-ARM GAS  /tmp/cc1464yV.s 			page 58
+ARM GAS  /tmp/cc6K6OOM.s 			page 58
 
 
  2474 0038 1344     		add	r3, r3, r2
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2517              		.loc 1 806 0
  2518 0098 BB68     		ldr	r3, [r7, #8]
  2519 009a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-ARM GAS  /tmp/cc1464yV.s 			page 59
+ARM GAS  /tmp/cc6K6OOM.s 			page 59
 
 
  2520 009c 5A01     		lsls	r2, r3, #5
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2567 00fc BB68     		ldr	r3, [r7, #8]
  2568 00fe 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  2569 0100 5A01     		lsls	r2, r3, #5
-ARM GAS  /tmp/cc1464yV.s 			page 60
+ARM GAS  /tmp/cc6K6OOM.s 			page 60
 
 
  2570 0102 FB68     		ldr	r3, [r7, #12]
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2618 016c 1B68     		ldr	r3, [r3]
  2619 016e 43F00443 		orr	r3, r3, #-2080374784
  2620 0172 0B60     		str	r3, [r1]
-ARM GAS  /tmp/cc1464yV.s 			page 61
+ARM GAS  /tmp/cc6K6OOM.s 			page 61
 
 
  820:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  836:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   {
  837:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     /* Program the transfer size and packet count as follows:
  838:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     * pktcnt = N
-ARM GAS  /tmp/cc1464yV.s 			page 62
+ARM GAS  /tmp/cc6K6OOM.s 			page 62
 
 
  839:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     * xfersize = N * maxpacket
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2705              	.L118:
  847:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     }
  848:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     
-ARM GAS  /tmp/cc1464yV.s 			page 63
+ARM GAS  /tmp/cc6K6OOM.s 			page 63
 
 
  849:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     USBx_OUTEP(ep->num)->DOEPTSIZ |= (USB_OTG_DOEPTSIZ_PKTCNT & (1U << 19U));
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2753 027e 03F53063 		add	r3, r3, #2816
  2754 0282 1A46     		mov	r2, r3
  2755 0284 BB68     		ldr	r3, [r7, #8]
-ARM GAS  /tmp/cc1464yV.s 			page 64
+ARM GAS  /tmp/cc6K6OOM.s 			page 64
 
 
  2756 0286 DB68     		ldr	r3, [r3, #12]
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2805              	.LFB139:
  863:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** 
  864:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** /**
-ARM GAS  /tmp/cc1464yV.s 			page 65
+ARM GAS  /tmp/cc6K6OOM.s 			page 65
 
 
  865:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @brief  USB_WritePacket : Writes a packet into the Tx FIFO associated 
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2841 002a 9B08     		lsrs	r3, r3, #2
  2842 002c 3B61     		str	r3, [r7, #16]
  884:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     for (i = 0U; i < count32b; i++, src += 4U)
-ARM GAS  /tmp/cc1464yV.s 			page 66
+ARM GAS  /tmp/cc6K6OOM.s 			page 66
 
 
  2843              		.loc 1 884 0
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2889              	.LFE139:
  2891              		.section	.text.USB_ReadPacket,"ax",%progbits
  2892              		.align	1
-ARM GAS  /tmp/cc1464yV.s 			page 67
+ARM GAS  /tmp/cc6K6OOM.s 			page 67
 
 
  2893              		.global	USB_ReadPacket
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2928              		.loc 1 910 0
  2929 001a 0023     		movs	r3, #0
  2930 001c 7B61     		str	r3, [r7, #20]
-ARM GAS  /tmp/cc1464yV.s 			page 68
+ARM GAS  /tmp/cc6K6OOM.s 			page 68
 
 
  2931 001e 0BE0     		b	.L127
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  2979              	USB_EPSetStall:
  2980              	.LFB141:
  917:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** 
-ARM GAS  /tmp/cc1464yV.s 			page 69
+ARM GAS  /tmp/cc6K6OOM.s 			page 69
 
 
  918:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** /**
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3022 0038 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  3023 003a 5A01     		lsls	r2, r3, #5
  3024 003c 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/cc1464yV.s 			page 70
+ARM GAS  /tmp/cc6K6OOM.s 			page 70
 
 
  3025 003e 1344     		add	r3, r3, r2
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3071 009e 7B68     		ldr	r3, [r7, #4]
  3072 00a0 1344     		add	r3, r3, r2
  3073 00a2 03F53063 		add	r3, r3, #2816
-ARM GAS  /tmp/cc1464yV.s 			page 71
+ARM GAS  /tmp/cc6K6OOM.s 			page 71
 
 
  3074 00a6 1B68     		ldr	r3, [r3]
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  944:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** 
  945:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** 
  946:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** /**
-ARM GAS  /tmp/cc1464yV.s 			page 72
+ARM GAS  /tmp/cc6K6OOM.s 			page 72
 
 
  947:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @brief  USB_EPClearStall : Clear a stall condition over an EP
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3168 003e 03D0     		beq	.L138
  3169              		.loc 1 957 0 is_stmt 0 discriminator 1
  3170 0040 3B68     		ldr	r3, [r7]
-ARM GAS  /tmp/cc1464yV.s 			page 73
+ARM GAS  /tmp/cc6K6OOM.s 			page 73
 
 
  3171 0042 DB78     		ldrb	r3, [r3, #3]	@ zero_extendqisi2
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3217 009e 3B68     		ldr	r3, [r7]
  3218 00a0 DB78     		ldrb	r3, [r3, #3]	@ zero_extendqisi2
  3219 00a2 022B     		cmp	r3, #2
-ARM GAS  /tmp/cc1464yV.s 			page 74
+ARM GAS  /tmp/cc6K6OOM.s 			page 74
 
 
  3220 00a4 12D1     		bne	.L140
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  973:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** /**
  974:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @brief  USB_StopDevice : Stop the usb device mode
  975:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @param  USBx  Selected device
-ARM GAS  /tmp/cc1464yV.s 			page 75
+ARM GAS  /tmp/cc6K6OOM.s 			page 75
 
 
  976:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @retval HAL status
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3311 0036 FB60     		str	r3, [r7, #12]
  3312              	.L144:
  983:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   {
-ARM GAS  /tmp/cc1464yV.s 			page 76
+ARM GAS  /tmp/cc6K6OOM.s 			page 76
 
 
  3313              		.loc 1 983 0 is_stmt 0 discriminator 1
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3353              	.LCFI117:
  3354              		.cfi_def_cfa_offset 8
  3355 0084 BD46     		mov	sp, r7
-ARM GAS  /tmp/cc1464yV.s 			page 77
+ARM GAS  /tmp/cc6K6OOM.s 			page 77
 
 
  3356              	.LCFI118:
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3400              		.loc 1 1012 0
  3401 0022 7B68     		ldr	r3, [r7, #4]
  3402 0024 03F50063 		add	r3, r3, #2048
-ARM GAS  /tmp/cc1464yV.s 			page 78
+ARM GAS  /tmp/cc6K6OOM.s 			page 78
 
 
  3403 0028 1946     		mov	r1, r3
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3448              		.cfi_offset 7, -8
  3449              		.cfi_offset 14, -4
  3450 0002 82B0     		sub	sp, sp, #8
-ARM GAS  /tmp/cc1464yV.s 			page 79
+ARM GAS  /tmp/cc6K6OOM.s 			page 79
 
 
  3451              	.LCFI126:
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3494              		.loc 1 1036 0
  3495              		.cfi_startproc
  3496              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  /tmp/cc1464yV.s 			page 80
+ARM GAS  /tmp/cc6K6OOM.s 			page 80
 
 
  3497              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1043:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** /**
 1044:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @brief  USB_ReadInterrupts: return the global USB interrupt status
 1045:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @param  USBx  Selected device
-ARM GAS  /tmp/cc1464yV.s 			page 81
+ARM GAS  /tmp/cc6K6OOM.s 			page 81
 
 
 1046:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @retval HAL status
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3591 0028 7047     		bx	lr
  3592              		.cfi_endproc
  3593              	.LFE147:
-ARM GAS  /tmp/cc1464yV.s 			page 82
+ARM GAS  /tmp/cc6K6OOM.s 			page 82
 
 
  3595              		.section	.text.USB_ReadDevAllOutEpInterrupt,"ax",%progbits
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3637 0024 1846     		mov	r0, r3
  3638 0026 1437     		adds	r7, r7, #20
  3639              	.LCFI144:
-ARM GAS  /tmp/cc1464yV.s 			page 83
+ARM GAS  /tmp/cc6K6OOM.s 			page 83
 
 
  3640              		.cfi_def_cfa_offset 4
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3685 0012 7B68     		ldr	r3, [r7, #4]
  3686 0014 03F50063 		add	r3, r3, #2048
  3687 0018 DB69     		ldr	r3, [r3, #28]
-ARM GAS  /tmp/cc1464yV.s 			page 84
+ARM GAS  /tmp/cc6K6OOM.s 			page 84
 
 
  3688 001a FA68     		ldr	r2, [r7, #12]
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3732              		.cfi_def_cfa_offset 24
  3733 0004 00AF     		add	r7, sp, #0
  3734              	.LCFI155:
-ARM GAS  /tmp/cc1464yV.s 			page 85
+ARM GAS  /tmp/cc6K6OOM.s 			page 85
 
 
  3735              		.cfi_def_cfa_register 7
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1100:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @param  USBx  Selected device
 1101:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @param  epnum  endpoint number
 1102:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   *          This parameter can be a value from 0 to 15
-ARM GAS  /tmp/cc1464yV.s 			page 86
+ARM GAS  /tmp/cc6K6OOM.s 			page 86
 
 
 1103:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @retval Device IN EP Interrupt register
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3827 0040 7B69     		ldr	r3, [r7, #20]
  3828 0042 1340     		ands	r3, r3, r2
  3829 0044 FB60     		str	r3, [r7, #12]
-ARM GAS  /tmp/cc1464yV.s 			page 87
+ARM GAS  /tmp/cc6K6OOM.s 			page 87
 
 
 1113:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   return v;
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3875 0008 3960     		str	r1, [r7]
 1124:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   USBx->GINTSTS |= interrupt; 
  3876              		.loc 1 1124 0
-ARM GAS  /tmp/cc1464yV.s 			page 88
+ARM GAS  /tmp/cc6K6OOM.s 			page 88
 
 
  3877 000a 7B68     		ldr	r3, [r7, #4]
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3921              		.cfi_def_cfa_offset 16
  3922 0004 00AF     		add	r7, sp, #0
  3923              	.LCFI173:
-ARM GAS  /tmp/cc1464yV.s 			page 89
+ARM GAS  /tmp/cc6K6OOM.s 			page 89
 
 
  3924              		.cfi_def_cfa_register 7
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  3969 0004 00AF     		add	r7, sp, #0
  3970              	.LCFI179:
  3971              		.cfi_def_cfa_register 7
-ARM GAS  /tmp/cc1464yV.s 			page 90
+ARM GAS  /tmp/cc6K6OOM.s 			page 90
 
 
  3972 0006 7860     		str	r0, [r7, #4]
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4015              		.cfi_def_cfa_offset 4
  4016 0064 BD46     		mov	sp, r7
  4017              	.LCFI181:
-ARM GAS  /tmp/cc1464yV.s 			page 91
+ARM GAS  /tmp/cc6K6OOM.s 			page 91
 
 
  4018              		.cfi_def_cfa_register 13
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4059 0010 03F53063 		add	r3, r3, #2816
  4060 0014 1A46     		mov	r2, r3
  4061 0016 0023     		movs	r3, #0
-ARM GAS  /tmp/cc1464yV.s 			page 92
+ARM GAS  /tmp/cc6K6OOM.s 			page 92
 
 
  4062 0018 1361     		str	r3, [r2, #16]
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1183:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   }
 1184:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   
 1185:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   return HAL_OK;  
-ARM GAS  /tmp/cc1464yV.s 			page 93
+ARM GAS  /tmp/cc6K6OOM.s 			page 93
 
 
  4107              		.loc 1 1185 0
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4152 0008 0023     		movs	r3, #0
  4153 000a FB60     		str	r3, [r7, #12]
  4154              	.L175:
-ARM GAS  /tmp/cc1464yV.s 			page 94
+ARM GAS  /tmp/cc6K6OOM.s 			page 94
 
 
 1197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** 
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1216:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****       return HAL_TIMEOUT;
  4190              		.loc 1 1216 0
  4191 0044 0323     		movs	r3, #3
-ARM GAS  /tmp/cc1464yV.s 			page 95
+ARM GAS  /tmp/cc6K6OOM.s 			page 95
 
 
  4192 0046 06E0     		b	.L174
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1231:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @retval HAL status
 1232:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   */
 1233:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** HAL_StatusTypeDef USB_HostInit (USB_OTG_GlobalTypeDef *USBx, USB_OTG_CfgTypeDef cfg)
-ARM GAS  /tmp/cc1464yV.s 			page 96
+ARM GAS  /tmp/cc6K6OOM.s 			page 96
 
 
 1234:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** {
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4274 0036 7B68     		ldr	r3, [r7, #4]
  4275 0038 9B6B     		ldr	r3, [r3, #56]
  4276 003a 43F40012 		orr	r2, r3, #2097152
-ARM GAS  /tmp/cc1464yV.s 			page 97
+ARM GAS  /tmp/cc6K6OOM.s 			page 97
 
 
  4277 003e 7B68     		ldr	r3, [r7, #4]
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1264:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** 
 1265:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   /* Clear all pending HC Interrupts */
 1266:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   for (i = 0U; i < cfg.Host_channels; i++)
-ARM GAS  /tmp/cc1464yV.s 			page 98
+ARM GAS  /tmp/cc6K6OOM.s 			page 98
 
 
  4315              		.loc 1 1266 0
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4355              		.loc 1 1278 0
  4356 00d4 7B68     		ldr	r3, [r7, #4]
  4357 00d6 0022     		movs	r2, #0
-ARM GAS  /tmp/cc1464yV.s 			page 99
+ARM GAS  /tmp/cc6K6OOM.s 			page 99
 
 
  4358 00d8 9A61     		str	r2, [r3, #24]
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1297:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   
 1298:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   /* Enable the common interrupts */
 1299:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   if (cfg.dma_enable == DISABLE)
-ARM GAS  /tmp/cc1464yV.s 			page 100
+ARM GAS  /tmp/cc6K6OOM.s 			page 100
 
 
  4394              		.loc 1 1299 0
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4437 014c 00020001 		.word	16777728
  4438 0150 0003E000 		.word	14680832
  4439 0154 080020A3 		.word	-1558183928
-ARM GAS  /tmp/cc1464yV.s 			page 101
+ARM GAS  /tmp/cc6K6OOM.s 			page 101
 
 
  4440              		.cfi_endproc
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4481 0022 7B68     		ldr	r3, [r7, #4]
  4482 0024 03F58063 		add	r3, r3, #1024
  4483 0028 1946     		mov	r1, r3
-ARM GAS  /tmp/cc1464yV.s 			page 102
+ARM GAS  /tmp/cc6K6OOM.s 			page 102
 
 
  4484 002a 7B68     		ldr	r3, [r7, #4]
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4527              		.cfi_restore 7
  4528              		.cfi_def_cfa_offset 0
  4529 0072 7047     		bx	lr
-ARM GAS  /tmp/cc1464yV.s 			page 103
+ARM GAS  /tmp/cc6K6OOM.s 			page 103
 
 
  4530              		.cfi_endproc
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4568              		.loc 1 1354 0
  4569 001a 7B68     		ldr	r3, [r7, #4]
  4570 001c 03F58863 		add	r3, r3, #1088
-ARM GAS  /tmp/cc1464yV.s 			page 104
+ARM GAS  /tmp/cc6K6OOM.s 			page 104
 
 
  4571 0020 1A46     		mov	r2, r3
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4612              		@ args = 0, pretend = 0, frame = 16
  4613              		@ frame_needed = 1, uses_anonymous_args = 0
  4614              		@ link register save eliminated.
-ARM GAS  /tmp/cc1464yV.s 			page 105
+ARM GAS  /tmp/cc6K6OOM.s 			page 105
 
 
  4615 0000 80B4     		push	{r7}
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4658 0048 0AD1     		bne	.L199
  4659              		.loc 1 1380 0 is_stmt 0 discriminator 1
  4660 004a FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
-ARM GAS  /tmp/cc1464yV.s 			page 106
+ARM GAS  /tmp/cc6K6OOM.s 			page 106
 
 
  4661 004c 002B     		cmp	r3, #0
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4700              		.loc 1 1397 0
  4701              		.cfi_startproc
  4702              		@ args = 0, pretend = 0, frame = 16
-ARM GAS  /tmp/cc1464yV.s 			page 107
+ARM GAS  /tmp/cc6K6OOM.s 			page 107
 
 
  4703              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1405:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @brief  Return Host Current Frame number
 1406:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @param  USBx  Selected device
 1407:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @retval current frame number
-ARM GAS  /tmp/cc1464yV.s 			page 108
+ARM GAS  /tmp/cc6K6OOM.s 			page 108
 
 
 1408:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** */
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1416:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @param  USBx  Selected device
 1417:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @param  ch_num  Channel number
 1418:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   *         This parameter can be a value from 1 to 15
-ARM GAS  /tmp/cc1464yV.s 			page 109
+ARM GAS  /tmp/cc6K6OOM.s 			page 109
 
 
 1419:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @param  epnum  Endpoint number
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1448:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   USBx_HC(ch_num)->HCINT = 0xFFFFFFFFU;
  4825              		.loc 1 1448 0
  4826 001a FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
-ARM GAS  /tmp/cc1464yV.s 			page 110
+ARM GAS  /tmp/cc6K6OOM.s 			page 110
 
 
  4827 001c 5A01     		lsls	r2, r3, #5
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4864 006c 7B68     		ldr	r3, [r7, #4]
  4865 006e 1344     		add	r3, r3, r2
  4866 0070 03F5A063 		add	r3, r3, #1280
-ARM GAS  /tmp/cc1464yV.s 			page 111
+ARM GAS  /tmp/cc6K6OOM.s 			page 111
 
 
  4867 0074 1946     		mov	r1, r3
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4906 00c0 03F5A063 		add	r3, r3, #1280
  4907 00c4 1A46     		mov	r2, r3
  4908 00c6 40F29D63 		movw	r3, #1693
-ARM GAS  /tmp/cc1464yV.s 			page 112
+ARM GAS  /tmp/cc6K6OOM.s 			page 112
 
 
  4909 00ca D360     		str	r3, [r2, #12]
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4942 010c 97F90230 		ldrsb	r3, [r7, #2]
  4943 0110 002B     		cmp	r3, #0
  4944 0112 15DA     		bge	.L223
-ARM GAS  /tmp/cc1464yV.s 			page 113
+ARM GAS  /tmp/cc6K6OOM.s 			page 113
 
 
 1500:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     {
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  4986              		.loc 1 1510 0
  4987 015e 7B68     		ldr	r3, [r7, #4]
  4988 0160 9B69     		ldr	r3, [r3, #24]
-ARM GAS  /tmp/cc1464yV.s 			page 114
+ARM GAS  /tmp/cc6K6OOM.s 			page 114
 
 
  4989 0162 43F00072 		orr	r2, r3, #33554432
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1517:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****                              ((ep_type << 18U) & USB_OTG_HCCHAR_EPTYP)|\
  5034              		.loc 1 1517 0
  5035 01ac 3B7D     		ldrb	r3, [r7, #20]	@ zero_extendqisi2
-ARM GAS  /tmp/cc1464yV.s 			page 115
+ARM GAS  /tmp/cc6K6OOM.s 			page 115
 
 
  5036 01ae 9B04     		lsls	r3, r3, #18
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  5078 01f0 5DF8047B 		ldr	r7, [sp], #4
  5079              	.LCFI237:
  5080              		.cfi_restore 7
-ARM GAS  /tmp/cc1464yV.s 			page 116
+ARM GAS  /tmp/cc6K6OOM.s 			page 116
 
 
  5081              		.cfi_def_cfa_offset 0
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1546:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   uint16_t len_words = 0;   
  5118              		.loc 1 1546 0
  5119 0012 0023     		movs	r3, #0
-ARM GAS  /tmp/cc1464yV.s 			page 117
+ARM GAS  /tmp/cc6K6OOM.s 			page 117
 
 
  5120 0014 7B83     		strh	r3, [r7, #26]	@ movhi
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1559:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     {
 1560:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****       USBx_HC(hc->ch_num)->HCINTMSK &= ~(USB_OTG_HCINTMSK_NYET | USB_OTG_HCINTMSK_ACKM);
  5162              		.loc 1 1560 0
-ARM GAS  /tmp/cc1464yV.s 			page 118
+ARM GAS  /tmp/cc6K6OOM.s 			page 118
 
 
  5163 0058 BB68     		ldr	r3, [r7, #8]
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  5205              		.loc 1 1572 0
  5206 00aa 3B8B     		ldrh	r3, [r7, #24]	@ movhi
  5207 00ac FB83     		strh	r3, [r7, #30]	@ movhi
-ARM GAS  /tmp/cc1464yV.s 			page 119
+ARM GAS  /tmp/cc6K6OOM.s 			page 119
 
 
 1573:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****       hc->xfer_len = num_packets * hc->max_packet;
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  5247              		.loc 1 1587 0
  5248 00f4 FB8B     		ldrh	r3, [r7, #30]
  5249 00f6 DB04     		lsls	r3, r3, #19
-ARM GAS  /tmp/cc1464yV.s 			page 120
+ARM GAS  /tmp/cc6K6OOM.s 			page 120
 
 
  5250 00f8 1846     		mov	r0, r3
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  5291              		.loc 1 1597 0
  5292 0142 BB68     		ldr	r3, [r7, #8]
  5293 0144 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
-ARM GAS  /tmp/cc1464yV.s 			page 121
+ARM GAS  /tmp/cc6K6OOM.s 			page 121
 
 
  5294 0146 5A01     		lsls	r2, r3, #5
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  5342 01ac 43F00043 		orr	r3, r3, #-2147483648
  5343 01b0 7B61     		str	r3, [r7, #20]
 1604:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   USBx_HC(hc->ch_num)->HCCHAR = tmpreg;
-ARM GAS  /tmp/cc1464yV.s 			page 122
+ARM GAS  /tmp/cc6K6OOM.s 			page 122
 
 
  5344              		.loc 1 1604 0
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  5386 0200 0333     		adds	r3, r3, #3
  5387 0202 9B08     		lsrs	r3, r3, #2
  5388 0204 7B83     		strh	r3, [r7, #26]	@ movhi
-ARM GAS  /tmp/cc1464yV.s 			page 123
+ARM GAS  /tmp/cc6K6OOM.s 			page 123
 
 
 1617:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****         
@@ -7378,7 +7378,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1635:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****         break;
  5425              		.loc 1 1635 0
  5426 0246 03E0     		b	.L243
-ARM GAS  /tmp/cc1464yV.s 			page 124
+ARM GAS  /tmp/cc6K6OOM.s 			page 124
 
 
  5427              	.L241:
@@ -7438,7 +7438,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  5467 0276 00BF     		.align	2
  5468              	.L244:
  5469 0278 0000F81F 		.word	536346624
-ARM GAS  /tmp/cc1464yV.s 			page 125
+ARM GAS  /tmp/cc6K6OOM.s 			page 125
 
 
  5470              		.cfi_endproc
@@ -7498,7 +7498,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  5516              		.cfi_def_cfa_offset 0
  5517 001c 7047     		bx	lr
  5518              		.cfi_endproc
-ARM GAS  /tmp/cc1464yV.s 			page 126
+ARM GAS  /tmp/cc6K6OOM.s 			page 126
 
 
  5519              	.LFE165:
@@ -7558,7 +7558,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  5561 0024 002B     		cmp	r3, #0
  5562 0026 0BD0     		beq	.L249
  5563              		.loc 1 1671 0 is_stmt 0 discriminator 1
-ARM GAS  /tmp/cc1464yV.s 			page 127
+ARM GAS  /tmp/cc6K6OOM.s 			page 127
 
 
  5564 0028 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
@@ -7618,7 +7618,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  5610 0088 1B68     		ldr	r3, [r3]
  5611 008a 23F00043 		bic	r3, r3, #-2147483648
  5612 008e 0B60     		str	r3, [r1]
-ARM GAS  /tmp/cc1464yV.s 			page 128
+ARM GAS  /tmp/cc6K6OOM.s 			page 128
 
 
 1679:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****       USBx_HC(hc_num)->HCCHAR |= USB_OTG_HCCHAR_CHENA;  
@@ -7678,7 +7678,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  5653 00e0 1344     		add	r3, r3, r2
  5654 00e2 03F5A063 		add	r3, r3, #1280
  5655 00e6 1946     		mov	r1, r3
-ARM GAS  /tmp/cc1464yV.s 			page 129
+ARM GAS  /tmp/cc6K6OOM.s 			page 129
 
 
  5656 00e8 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
@@ -7738,7 +7738,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  5698 0138 1344     		add	r3, r3, r2
  5699 013a 03F5A063 		add	r3, r3, #1280
  5700 013e 1946     		mov	r1, r3
-ARM GAS  /tmp/cc1464yV.s 			page 130
+ARM GAS  /tmp/cc6K6OOM.s 			page 130
 
 
  5701 0140 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
@@ -7798,7 +7798,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1712:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     {
 1713:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****        USBx_HC(hc_num)->HCCHAR |= USB_OTG_HCCHAR_CHENA; 
  5744              		.loc 1 1713 0
-ARM GAS  /tmp/cc1464yV.s 			page 131
+ARM GAS  /tmp/cc6K6OOM.s 			page 131
 
 
  5745 019e FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
@@ -7858,7 +7858,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1721:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @brief  Initiate Do Ping protocol
 1722:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @param  USBx  Selected device
 1723:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   * @param  hc_num  Host Channel number
-ARM GAS  /tmp/cc1464yV.s 			page 132
+ARM GAS  /tmp/cc6K6OOM.s 			page 132
 
 
 1724:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****   *         This parameter can be a value from 1 to 15
@@ -7918,7 +7918,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  5834 0036 7B68     		ldr	r3, [r7, #4]
  5835 0038 1344     		add	r3, r3, r2
  5836 003a 03F5A063 		add	r3, r3, #1280
-ARM GAS  /tmp/cc1464yV.s 			page 133
+ARM GAS  /tmp/cc6K6OOM.s 			page 133
 
 
  5837 003e 1B68     		ldr	r3, [r3]
@@ -7978,7 +7978,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  5887              	USB_StopHost:
  5888              	.LFB168:
 1743:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** 
-ARM GAS  /tmp/cc1464yV.s 			page 134
+ARM GAS  /tmp/cc6K6OOM.s 			page 134
 
 
 1744:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** /**
@@ -8038,7 +8038,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
 1764:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c **** 
 1765:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c ****     value = USBx_HC(i)->HCCHAR ;
  5923              		.loc 1 1765 0 discriminator 3
-ARM GAS  /tmp/cc1464yV.s 			page 135
+ARM GAS  /tmp/cc6K6OOM.s 			page 135
 
 
  5924 0026 FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
@@ -8098,7 +8098,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  5966              		.loc 1 1775 0
  5967 0072 FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
  5968 0074 5A01     		lsls	r2, r3, #5
-ARM GAS  /tmp/cc1464yV.s 			page 136
+ARM GAS  /tmp/cc6K6OOM.s 			page 136
 
 
  5969 0076 7B68     		ldr	r3, [r7, #4]
@@ -8158,7 +8158,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  6009 00c6 1B68     		ldr	r3, [r3]
  6010 00c8 03F00043 		and	r3, r3, #-2147483648
  6011 00cc B3F1004F 		cmp	r3, #-2147483648
-ARM GAS  /tmp/cc1464yV.s 			page 137
+ARM GAS  /tmp/cc6K6OOM.s 			page 137
 
 
  6012 00d0 ECD0     		beq	.L275
@@ -8218,7 +8218,7 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  6056              		.align	2
  6059              	debug.9202:
  6060 0000 00000000 		.space	4
-ARM GAS  /tmp/cc1464yV.s 			page 138
+ARM GAS  /tmp/cc6K6OOM.s 			page 138
 
 
  6061              		.text
@@ -8235,127 +8235,127 @@ ARM GAS  /tmp/cc1464yV.s 			page 1
  6072              		.file 11 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
  6073              		.file 12 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
  6074              		.file 13 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h"
-ARM GAS  /tmp/cc1464yV.s 			page 139
+ARM GAS  /tmp/cc6K6OOM.s 			page 139
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f4xx_ll_usb.c
-     /tmp/cc1464yV.s:18     .text.USB_CoreInit:0000000000000000 $t
-     /tmp/cc1464yV.s:25     .text.USB_CoreInit:0000000000000000 USB_CoreInit
-     /tmp/cc1464yV.s:4133   .text.USB_CoreReset:0000000000000000 USB_CoreReset
-     /tmp/cc1464yV.s:143    .text.USB_EnableGlobalInt:0000000000000000 $t
-     /tmp/cc1464yV.s:150    .text.USB_EnableGlobalInt:0000000000000000 USB_EnableGlobalInt
-     /tmp/cc1464yV.s:194    .text.USB_DisableGlobalInt:0000000000000000 $t
-     /tmp/cc1464yV.s:201    .text.USB_DisableGlobalInt:0000000000000000 USB_DisableGlobalInt
-     /tmp/cc1464yV.s:245    .text.USB_SetCurrentMode:0000000000000000 $t
-     /tmp/cc1464yV.s:252    .text.USB_SetCurrentMode:0000000000000000 USB_SetCurrentMode
-     /tmp/cc1464yV.s:320    .text.USB_DevInit:0000000000000000 $t
-     /tmp/cc1464yV.s:327    .text.USB_DevInit:0000000000000000 USB_DevInit
-     /tmp/cc1464yV.s:845    .text.USB_SetDevSpeed:0000000000000000 USB_SetDevSpeed
-     /tmp/cc1464yV.s:690    .text.USB_FlushTxFifo:0000000000000000 USB_FlushTxFifo
-     /tmp/cc1464yV.s:769    .text.USB_FlushRxFifo:0000000000000000 USB_FlushRxFifo
-     /tmp/cc1464yV.s:677    .text.USB_DevInit:000000000000025c $d
-     /tmp/cc1464yV.s:683    .text.USB_FlushTxFifo:0000000000000000 $t
-     /tmp/cc1464yV.s:757    .text.USB_FlushTxFifo:0000000000000048 $d
-     /tmp/cc1464yV.s:762    .text.USB_FlushRxFifo:0000000000000000 $t
-     /tmp/cc1464yV.s:833    .text.USB_FlushRxFifo:0000000000000040 $d
-     /tmp/cc1464yV.s:838    .text.USB_SetDevSpeed:0000000000000000 $t
-     /tmp/cc1464yV.s:895    .text.USB_GetDevSpeed:0000000000000000 $t
-     /tmp/cc1464yV.s:902    .text.USB_GetDevSpeed:0000000000000000 USB_GetDevSpeed
-     /tmp/cc1464yV.s:987    .text.USB_ActivateEndpoint:0000000000000000 $t
-     /tmp/cc1464yV.s:994    .text.USB_ActivateEndpoint:0000000000000000 USB_ActivateEndpoint
-     /tmp/cc1464yV.s:1151   .text.USB_ActivateDedicatedEndpoint:0000000000000000 $t
-     /tmp/cc1464yV.s:1158   .text.USB_ActivateDedicatedEndpoint:0000000000000000 USB_ActivateDedicatedEndpoint
-     /tmp/cc1464yV.s:1377   .text.USB_ActivateDedicatedEndpoint:0000000000000184 $d
-     /tmp/cc1464yV.s:6059   .bss.debug.9202:0000000000000000 debug.9202
-     /tmp/cc1464yV.s:1382   .text.USB_DeactivateEndpoint:0000000000000000 $t
-     /tmp/cc1464yV.s:1389   .text.USB_DeactivateEndpoint:0000000000000000 USB_DeactivateEndpoint
-     /tmp/cc1464yV.s:1602   .text.USB_DeactivateEndpoint:0000000000000180 $d
-     /tmp/cc1464yV.s:1607   .text.USB_DeactivateDedicatedEndpoint:0000000000000000 $t
-     /tmp/cc1464yV.s:1614   .text.USB_DeactivateDedicatedEndpoint:0000000000000000 USB_DeactivateDedicatedEndpoint
-     /tmp/cc1464yV.s:1827   .text.USB_DeactivateDedicatedEndpoint:0000000000000180 $d
-     /tmp/cc1464yV.s:1832   .text.USB_EPStartXfer:0000000000000000 $t
-     /tmp/cc1464yV.s:1839   .text.USB_EPStartXfer:0000000000000000 USB_EPStartXfer
-     /tmp/cc1464yV.s:2804   .text.USB_WritePacket:0000000000000000 USB_WritePacket
-     /tmp/cc1464yV.s:2263   .text.USB_EPStartXfer:0000000000000354 $d
-     /tmp/cc1464yV.s:2266   .text.USB_EPStartXfer:0000000000000358 $t
-     /tmp/cc1464yV.s:2419   .text.USB_EPStartXfer:0000000000000480 $d
-     /tmp/cc1464yV.s:2424   .text.USB_EP0StartXfer:0000000000000000 $t
-     /tmp/cc1464yV.s:2431   .text.USB_EP0StartXfer:0000000000000000 USB_EP0StartXfer
-     /tmp/cc1464yV.s:2797   .text.USB_WritePacket:0000000000000000 $t
-     /tmp/cc1464yV.s:2892   .text.USB_ReadPacket:0000000000000000 $t
-     /tmp/cc1464yV.s:2899   .text.USB_ReadPacket:0000000000000000 USB_ReadPacket
-     /tmp/cc1464yV.s:2972   .text.USB_EPSetStall:0000000000000000 $t
-     /tmp/cc1464yV.s:2979   .text.USB_EPSetStall:0000000000000000 USB_EPSetStall
-     /tmp/cc1464yV.s:3116   .text.USB_EPClearStall:0000000000000000 $t
-     /tmp/cc1464yV.s:3123   .text.USB_EPClearStall:0000000000000000 USB_EPClearStall
-     /tmp/cc1464yV.s:3260   .text.USB_StopDevice:0000000000000000 $t
-     /tmp/cc1464yV.s:3267   .text.USB_StopDevice:0000000000000000 USB_StopDevice
-     /tmp/cc1464yV.s:3364   .text.USB_SetDevAddress:0000000000000000 $t
-     /tmp/cc1464yV.s:3371   .text.USB_SetDevAddress:0000000000000000 USB_SetDevAddress
-     /tmp/cc1464yV.s:3432   .text.USB_DevConnect:0000000000000000 $t
-     /tmp/cc1464yV.s:3439   .text.USB_DevConnect:0000000000000000 USB_DevConnect
-ARM GAS  /tmp/cc1464yV.s 			page 140
+     /tmp/cc6K6OOM.s:18     .text.USB_CoreInit:0000000000000000 $t
+     /tmp/cc6K6OOM.s:25     .text.USB_CoreInit:0000000000000000 USB_CoreInit
+     /tmp/cc6K6OOM.s:4133   .text.USB_CoreReset:0000000000000000 USB_CoreReset
+     /tmp/cc6K6OOM.s:143    .text.USB_EnableGlobalInt:0000000000000000 $t
+     /tmp/cc6K6OOM.s:150    .text.USB_EnableGlobalInt:0000000000000000 USB_EnableGlobalInt
+     /tmp/cc6K6OOM.s:194    .text.USB_DisableGlobalInt:0000000000000000 $t
+     /tmp/cc6K6OOM.s:201    .text.USB_DisableGlobalInt:0000000000000000 USB_DisableGlobalInt
+     /tmp/cc6K6OOM.s:245    .text.USB_SetCurrentMode:0000000000000000 $t
+     /tmp/cc6K6OOM.s:252    .text.USB_SetCurrentMode:0000000000000000 USB_SetCurrentMode
+     /tmp/cc6K6OOM.s:320    .text.USB_DevInit:0000000000000000 $t
+     /tmp/cc6K6OOM.s:327    .text.USB_DevInit:0000000000000000 USB_DevInit
+     /tmp/cc6K6OOM.s:845    .text.USB_SetDevSpeed:0000000000000000 USB_SetDevSpeed
+     /tmp/cc6K6OOM.s:690    .text.USB_FlushTxFifo:0000000000000000 USB_FlushTxFifo
+     /tmp/cc6K6OOM.s:769    .text.USB_FlushRxFifo:0000000000000000 USB_FlushRxFifo
+     /tmp/cc6K6OOM.s:677    .text.USB_DevInit:000000000000025c $d
+     /tmp/cc6K6OOM.s:683    .text.USB_FlushTxFifo:0000000000000000 $t
+     /tmp/cc6K6OOM.s:757    .text.USB_FlushTxFifo:0000000000000048 $d
+     /tmp/cc6K6OOM.s:762    .text.USB_FlushRxFifo:0000000000000000 $t
+     /tmp/cc6K6OOM.s:833    .text.USB_FlushRxFifo:0000000000000040 $d
+     /tmp/cc6K6OOM.s:838    .text.USB_SetDevSpeed:0000000000000000 $t
+     /tmp/cc6K6OOM.s:895    .text.USB_GetDevSpeed:0000000000000000 $t
+     /tmp/cc6K6OOM.s:902    .text.USB_GetDevSpeed:0000000000000000 USB_GetDevSpeed
+     /tmp/cc6K6OOM.s:987    .text.USB_ActivateEndpoint:0000000000000000 $t
+     /tmp/cc6K6OOM.s:994    .text.USB_ActivateEndpoint:0000000000000000 USB_ActivateEndpoint
+     /tmp/cc6K6OOM.s:1151   .text.USB_ActivateDedicatedEndpoint:0000000000000000 $t
+     /tmp/cc6K6OOM.s:1158   .text.USB_ActivateDedicatedEndpoint:0000000000000000 USB_ActivateDedicatedEndpoint
+     /tmp/cc6K6OOM.s:1377   .text.USB_ActivateDedicatedEndpoint:0000000000000184 $d
+     /tmp/cc6K6OOM.s:6059   .bss.debug.9202:0000000000000000 debug.9202
+     /tmp/cc6K6OOM.s:1382   .text.USB_DeactivateEndpoint:0000000000000000 $t
+     /tmp/cc6K6OOM.s:1389   .text.USB_DeactivateEndpoint:0000000000000000 USB_DeactivateEndpoint
+     /tmp/cc6K6OOM.s:1602   .text.USB_DeactivateEndpoint:0000000000000180 $d
+     /tmp/cc6K6OOM.s:1607   .text.USB_DeactivateDedicatedEndpoint:0000000000000000 $t
+     /tmp/cc6K6OOM.s:1614   .text.USB_DeactivateDedicatedEndpoint:0000000000000000 USB_DeactivateDedicatedEndpoint
+     /tmp/cc6K6OOM.s:1827   .text.USB_DeactivateDedicatedEndpoint:0000000000000180 $d
+     /tmp/cc6K6OOM.s:1832   .text.USB_EPStartXfer:0000000000000000 $t
+     /tmp/cc6K6OOM.s:1839   .text.USB_EPStartXfer:0000000000000000 USB_EPStartXfer
+     /tmp/cc6K6OOM.s:2804   .text.USB_WritePacket:0000000000000000 USB_WritePacket
+     /tmp/cc6K6OOM.s:2263   .text.USB_EPStartXfer:0000000000000354 $d
+     /tmp/cc6K6OOM.s:2266   .text.USB_EPStartXfer:0000000000000358 $t
+     /tmp/cc6K6OOM.s:2419   .text.USB_EPStartXfer:0000000000000480 $d
+     /tmp/cc6K6OOM.s:2424   .text.USB_EP0StartXfer:0000000000000000 $t
+     /tmp/cc6K6OOM.s:2431   .text.USB_EP0StartXfer:0000000000000000 USB_EP0StartXfer
+     /tmp/cc6K6OOM.s:2797   .text.USB_WritePacket:0000000000000000 $t
+     /tmp/cc6K6OOM.s:2892   .text.USB_ReadPacket:0000000000000000 $t
+     /tmp/cc6K6OOM.s:2899   .text.USB_ReadPacket:0000000000000000 USB_ReadPacket
+     /tmp/cc6K6OOM.s:2972   .text.USB_EPSetStall:0000000000000000 $t
+     /tmp/cc6K6OOM.s:2979   .text.USB_EPSetStall:0000000000000000 USB_EPSetStall
+     /tmp/cc6K6OOM.s:3116   .text.USB_EPClearStall:0000000000000000 $t
+     /tmp/cc6K6OOM.s:3123   .text.USB_EPClearStall:0000000000000000 USB_EPClearStall
+     /tmp/cc6K6OOM.s:3260   .text.USB_StopDevice:0000000000000000 $t
+     /tmp/cc6K6OOM.s:3267   .text.USB_StopDevice:0000000000000000 USB_StopDevice
+     /tmp/cc6K6OOM.s:3364   .text.USB_SetDevAddress:0000000000000000 $t
+     /tmp/cc6K6OOM.s:3371   .text.USB_SetDevAddress:0000000000000000 USB_SetDevAddress
+     /tmp/cc6K6OOM.s:3432   .text.USB_DevConnect:0000000000000000 $t
+     /tmp/cc6K6OOM.s:3439   .text.USB_DevConnect:0000000000000000 USB_DevConnect
+ARM GAS  /tmp/cc6K6OOM.s 			page 140
 
 
-     /tmp/cc1464yV.s:3485   .text.USB_DevDisconnect:0000000000000000 $t
-     /tmp/cc1464yV.s:3492   .text.USB_DevDisconnect:0000000000000000 USB_DevDisconnect
-     /tmp/cc1464yV.s:3538   .text.USB_ReadInterrupts:0000000000000000 $t
-     /tmp/cc1464yV.s:3545   .text.USB_ReadInterrupts:0000000000000000 USB_ReadInterrupts
-     /tmp/cc1464yV.s:3596   .text.USB_ReadDevAllOutEpInterrupt:0000000000000000 $t
-     /tmp/cc1464yV.s:3603   .text.USB_ReadDevAllOutEpInterrupt:0000000000000000 USB_ReadDevAllOutEpInterrupt
-     /tmp/cc1464yV.s:3654   .text.USB_ReadDevAllInEpInterrupt:0000000000000000 $t
-     /tmp/cc1464yV.s:3661   .text.USB_ReadDevAllInEpInterrupt:0000000000000000 USB_ReadDevAllInEpInterrupt
-     /tmp/cc1464yV.s:3712   .text.USB_ReadDevOutEPInterrupt:0000000000000000 $t
-     /tmp/cc1464yV.s:3719   .text.USB_ReadDevOutEPInterrupt:0000000000000000 USB_ReadDevOutEPInterrupt
-     /tmp/cc1464yV.s:3774   .text.USB_ReadDevInEPInterrupt:0000000000000000 $t
-     /tmp/cc1464yV.s:3781   .text.USB_ReadDevInEPInterrupt:0000000000000000 USB_ReadDevInEPInterrupt
-     /tmp/cc1464yV.s:3850   .text.USB_ClearInterrupts:0000000000000000 $t
-     /tmp/cc1464yV.s:3857   .text.USB_ClearInterrupts:0000000000000000 USB_ClearInterrupts
-     /tmp/cc1464yV.s:3901   .text.USB_GetMode:0000000000000000 $t
-     /tmp/cc1464yV.s:3908   .text.USB_GetMode:0000000000000000 USB_GetMode
-     /tmp/cc1464yV.s:3948   .text.USB_ActivateSetup:0000000000000000 $t
-     /tmp/cc1464yV.s:3955   .text.USB_ActivateSetup:0000000000000000 USB_ActivateSetup
-     /tmp/cc1464yV.s:4029   .text.USB_EP0_OutStart:0000000000000000 $t
-     /tmp/cc1464yV.s:4036   .text.USB_EP0_OutStart:0000000000000000 USB_EP0_OutStart
-     /tmp/cc1464yV.s:4127   .text.USB_CoreReset:0000000000000000 $t
-     /tmp/cc1464yV.s:4220   .text.USB_CoreReset:0000000000000064 $d
-     /tmp/cc1464yV.s:4225   .text.USB_HostInit:0000000000000000 $t
-     /tmp/cc1464yV.s:4232   .text.USB_HostInit:0000000000000000 USB_HostInit
-     /tmp/cc1464yV.s:4608   .text.USB_DriveVbus:0000000000000000 USB_DriveVbus
-     /tmp/cc1464yV.s:4435   .text.USB_HostInit:0000000000000144 $d
-     /tmp/cc1464yV.s:4444   .text.USB_InitFSLSPClkSel:0000000000000000 $t
-     /tmp/cc1464yV.s:4451   .text.USB_InitFSLSPClkSel:0000000000000000 USB_InitFSLSPClkSel
-     /tmp/cc1464yV.s:4534   .text.USB_ResetPort:0000000000000000 $t
-     /tmp/cc1464yV.s:4541   .text.USB_ResetPort:0000000000000000 USB_ResetPort
-     /tmp/cc1464yV.s:4601   .text.USB_DriveVbus:0000000000000000 $t
-     /tmp/cc1464yV.s:4691   .text.USB_GetHostSpeed:0000000000000000 $t
-     /tmp/cc1464yV.s:4698   .text.USB_GetHostSpeed:0000000000000000 USB_GetHostSpeed
-     /tmp/cc1464yV.s:4743   .text.USB_GetCurrentFrame:0000000000000000 $t
-     /tmp/cc1464yV.s:4750   .text.USB_GetCurrentFrame:0000000000000000 USB_GetCurrentFrame
-     /tmp/cc1464yV.s:4791   .text.USB_HC_Init:0000000000000000 $t
-     /tmp/cc1464yV.s:4798   .text.USB_HC_Init:0000000000000000 USB_HC_Init
-     /tmp/cc1464yV.s:4842   .text.USB_HC_Init:000000000000003c $d
-     /tmp/cc1464yV.s:4846   .text.USB_HC_Init:000000000000004c $t
-     /tmp/cc1464yV.s:5087   .text.USB_HC_StartXfer:0000000000000000 $t
-     /tmp/cc1464yV.s:5094   .text.USB_HC_StartXfer:0000000000000000 USB_HC_StartXfer
-     /tmp/cc1464yV.s:5791   .text.USB_DoPing:0000000000000000 USB_DoPing
-     /tmp/cc1464yV.s:5377   .text.USB_HC_StartXfer:00000000000001ec $d
-     /tmp/cc1464yV.s:5381   .text.USB_HC_StartXfer:00000000000001fc $t
-     /tmp/cc1464yV.s:5469   .text.USB_HC_StartXfer:0000000000000278 $d
-     /tmp/cc1464yV.s:5474   .text.USB_HC_ReadInterrupt:0000000000000000 $t
-     /tmp/cc1464yV.s:5481   .text.USB_HC_ReadInterrupt:0000000000000000 USB_HC_ReadInterrupt
-     /tmp/cc1464yV.s:5522   .text.USB_HC_Halt:0000000000000000 $t
-     /tmp/cc1464yV.s:5529   .text.USB_HC_Halt:0000000000000000 USB_HC_Halt
-     /tmp/cc1464yV.s:5784   .text.USB_DoPing:0000000000000000 $t
-     /tmp/cc1464yV.s:5875   .text.USB_DoPing:0000000000000074 $d
-     /tmp/cc1464yV.s:5880   .text.USB_StopHost:0000000000000000 $t
-     /tmp/cc1464yV.s:5887   .text.USB_StopHost:0000000000000000 USB_StopHost
-     /tmp/cc1464yV.s:6056   .bss.debug.9202:0000000000000000 $d
+     /tmp/cc6K6OOM.s:3485   .text.USB_DevDisconnect:0000000000000000 $t
+     /tmp/cc6K6OOM.s:3492   .text.USB_DevDisconnect:0000000000000000 USB_DevDisconnect
+     /tmp/cc6K6OOM.s:3538   .text.USB_ReadInterrupts:0000000000000000 $t
+     /tmp/cc6K6OOM.s:3545   .text.USB_ReadInterrupts:0000000000000000 USB_ReadInterrupts
+     /tmp/cc6K6OOM.s:3596   .text.USB_ReadDevAllOutEpInterrupt:0000000000000000 $t
+     /tmp/cc6K6OOM.s:3603   .text.USB_ReadDevAllOutEpInterrupt:0000000000000000 USB_ReadDevAllOutEpInterrupt
+     /tmp/cc6K6OOM.s:3654   .text.USB_ReadDevAllInEpInterrupt:0000000000000000 $t
+     /tmp/cc6K6OOM.s:3661   .text.USB_ReadDevAllInEpInterrupt:0000000000000000 USB_ReadDevAllInEpInterrupt
+     /tmp/cc6K6OOM.s:3712   .text.USB_ReadDevOutEPInterrupt:0000000000000000 $t
+     /tmp/cc6K6OOM.s:3719   .text.USB_ReadDevOutEPInterrupt:0000000000000000 USB_ReadDevOutEPInterrupt
+     /tmp/cc6K6OOM.s:3774   .text.USB_ReadDevInEPInterrupt:0000000000000000 $t
+     /tmp/cc6K6OOM.s:3781   .text.USB_ReadDevInEPInterrupt:0000000000000000 USB_ReadDevInEPInterrupt
+     /tmp/cc6K6OOM.s:3850   .text.USB_ClearInterrupts:0000000000000000 $t
+     /tmp/cc6K6OOM.s:3857   .text.USB_ClearInterrupts:0000000000000000 USB_ClearInterrupts
+     /tmp/cc6K6OOM.s:3901   .text.USB_GetMode:0000000000000000 $t
+     /tmp/cc6K6OOM.s:3908   .text.USB_GetMode:0000000000000000 USB_GetMode
+     /tmp/cc6K6OOM.s:3948   .text.USB_ActivateSetup:0000000000000000 $t
+     /tmp/cc6K6OOM.s:3955   .text.USB_ActivateSetup:0000000000000000 USB_ActivateSetup
+     /tmp/cc6K6OOM.s:4029   .text.USB_EP0_OutStart:0000000000000000 $t
+     /tmp/cc6K6OOM.s:4036   .text.USB_EP0_OutStart:0000000000000000 USB_EP0_OutStart
+     /tmp/cc6K6OOM.s:4127   .text.USB_CoreReset:0000000000000000 $t
+     /tmp/cc6K6OOM.s:4220   .text.USB_CoreReset:0000000000000064 $d
+     /tmp/cc6K6OOM.s:4225   .text.USB_HostInit:0000000000000000 $t
+     /tmp/cc6K6OOM.s:4232   .text.USB_HostInit:0000000000000000 USB_HostInit
+     /tmp/cc6K6OOM.s:4608   .text.USB_DriveVbus:0000000000000000 USB_DriveVbus
+     /tmp/cc6K6OOM.s:4435   .text.USB_HostInit:0000000000000144 $d
+     /tmp/cc6K6OOM.s:4444   .text.USB_InitFSLSPClkSel:0000000000000000 $t
+     /tmp/cc6K6OOM.s:4451   .text.USB_InitFSLSPClkSel:0000000000000000 USB_InitFSLSPClkSel
+     /tmp/cc6K6OOM.s:4534   .text.USB_ResetPort:0000000000000000 $t
+     /tmp/cc6K6OOM.s:4541   .text.USB_ResetPort:0000000000000000 USB_ResetPort
+     /tmp/cc6K6OOM.s:4601   .text.USB_DriveVbus:0000000000000000 $t
+     /tmp/cc6K6OOM.s:4691   .text.USB_GetHostSpeed:0000000000000000 $t
+     /tmp/cc6K6OOM.s:4698   .text.USB_GetHostSpeed:0000000000000000 USB_GetHostSpeed
+     /tmp/cc6K6OOM.s:4743   .text.USB_GetCurrentFrame:0000000000000000 $t
+     /tmp/cc6K6OOM.s:4750   .text.USB_GetCurrentFrame:0000000000000000 USB_GetCurrentFrame
+     /tmp/cc6K6OOM.s:4791   .text.USB_HC_Init:0000000000000000 $t
+     /tmp/cc6K6OOM.s:4798   .text.USB_HC_Init:0000000000000000 USB_HC_Init
+     /tmp/cc6K6OOM.s:4842   .text.USB_HC_Init:000000000000003c $d
+     /tmp/cc6K6OOM.s:4846   .text.USB_HC_Init:000000000000004c $t
+     /tmp/cc6K6OOM.s:5087   .text.USB_HC_StartXfer:0000000000000000 $t
+     /tmp/cc6K6OOM.s:5094   .text.USB_HC_StartXfer:0000000000000000 USB_HC_StartXfer
+     /tmp/cc6K6OOM.s:5791   .text.USB_DoPing:0000000000000000 USB_DoPing
+     /tmp/cc6K6OOM.s:5377   .text.USB_HC_StartXfer:00000000000001ec $d
+     /tmp/cc6K6OOM.s:5381   .text.USB_HC_StartXfer:00000000000001fc $t
+     /tmp/cc6K6OOM.s:5469   .text.USB_HC_StartXfer:0000000000000278 $d
+     /tmp/cc6K6OOM.s:5474   .text.USB_HC_ReadInterrupt:0000000000000000 $t
+     /tmp/cc6K6OOM.s:5481   .text.USB_HC_ReadInterrupt:0000000000000000 USB_HC_ReadInterrupt
+     /tmp/cc6K6OOM.s:5522   .text.USB_HC_Halt:0000000000000000 $t
+     /tmp/cc6K6OOM.s:5529   .text.USB_HC_Halt:0000000000000000 USB_HC_Halt
+     /tmp/cc6K6OOM.s:5784   .text.USB_DoPing:0000000000000000 $t
+     /tmp/cc6K6OOM.s:5875   .text.USB_DoPing:0000000000000074 $d
+     /tmp/cc6K6OOM.s:5880   .text.USB_StopHost:0000000000000000 $t
+     /tmp/cc6K6OOM.s:5887   .text.USB_StopHost:0000000000000000 USB_StopHost
+     /tmp/cc6K6OOM.s:6056   .bss.debug.9202:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
-ARM GAS  /tmp/cc1464yV.s 			page 141
+ARM GAS  /tmp/cc6K6OOM.s 			page 141
 
 
 HAL_Delay

@@ -268,10 +268,6 @@ static int8_t CDC_Control_HS  (uint8_t cmd, uint8_t* pbuf, uint16_t length)
   */
 static int8_t CDC_Receive_HS (uint8_t* Buf, uint32_t *Len)
 {
-uint8_t DataToSend[40];
-uint16_t MessageLength = 0; 
-MessageLength = sprintf(DataToSend, "recived\n");
-    CDC_Transmit_HS(DataToSend, MessageLength);
   /* USER CODE BEGIN 11 */ 
   USBD_CDC_SetRxBuffer(&hUsbDeviceHS, &Buf[0]);
   USBD_CDC_ReceivePacket(&hUsbDeviceHS);

@@ -578,6 +578,28 @@ int8_t CDC_Receive_HS (uint8_t* Buf, uint32_t *Len)
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
+void setupBassGuitar(){
+    //to robi gitare wuoncza
+    char status_byte_instrument=0xC2;//MIDI channel 2
+    char data_byte_1_instrument=0x21;//bass guitar
+
+    MessageLength = sprintf(DataToSend, "%c%c",status_byte_instrument,data_byte_1_instrument);
+    CDC_Transmit_HS(DataToSend, MessageLength);
+}
+
+char setupStatusByte(char keyStatus){
+    if(keyStatus == 0){//note on
+        return 0x92;
+    }else if(keyStatus == 1){//note off
+        return 0x82;
+    }
+}
+
+char setupDataByte2(char row,char column){
+    return 52 + column + 5*row;
+}
+
+
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
@@ -594,19 +616,33 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    HAL_Delay(2000);
-    //if (HAL_GPIO_ReadPin(Button_GPIO_Port, Button_Pin) == GPIO_PIN_SET) {
+    setupBassGuitar();
+
+    char keyStatus, row, column;
+    //tukej dostaje char z kosmosu
+    char c;
+    while(c==0){
+        c=readkey();
+        osDelay(5);
+    }
+    char keyStatusMask = 0x40;
+    char rowMask = 0x30;
+    char columnMask = 0xF;
     
-    char status_byte=0x90,data_byte_1=0x3C,data_byte_2=0x40;
+    keyStatus = c & keyStatusMask;
+    row = c & rowMask;
+    column = c & columnMask;
+
+    char status_byte;
+    char data_byte_1;
+    char data_byte_2=0x40;//velocity=64
+
+    status_byte = setupStatusByte(keyStatus);
+    data_byte_1 = setupDataByte2(row, column);
 
     MessageLength = sprintf(DataToSend, "%c%c%c",status_byte,data_byte_1,data_byte_2);
     CDC_Transmit_HS(DataToSend, MessageLength);
-    osDelay(200);
 
-    status_byte=0x80,data_byte_1=0x3C,data_byte_2=0x40;
-
-    MessageLength = sprintf(DataToSend, "%c%c%c",status_byte,data_byte_1,data_byte_2);
-    CDC_Transmit_HS(DataToSend, MessageLength);
   }
   /* USER CODE END 5 */ 
 }
