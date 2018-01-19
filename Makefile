@@ -243,6 +243,14 @@ flash:
 clean:
 	-rm -fR .dep $(BUILD_DIR)
   
+
+dupa:
+	make clean
+	make all
+	openocd -f openocd.cfg -c "program build/MiDi.elf verify reset exit"
+	sleep 1
+	lsusb -vd 0483:5740
+
 #######################################
 # dependencies
 #######################################

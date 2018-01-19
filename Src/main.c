@@ -620,7 +620,7 @@ void StartDefaultTask(void const * argument)
 
     char keyStatus, row, column;
     //tukej dostaje char z kosmosu
-    char c;
+    char c=0;
     while(c==0){
         c=readkey();
         osDelay(5);
@@ -642,6 +642,7 @@ void StartDefaultTask(void const * argument)
 
     MessageLength = sprintf(DataToSend, "%c%c%c",status_byte,data_byte_1,data_byte_2);
     CDC_Transmit_HS(DataToSend, MessageLength);
+    osDelay(500);
 
   }
   /* USER CODE END 5 */ 

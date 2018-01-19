@@ -138,10 +138,10 @@ __ALIGN_BEGIN uint8_t USBD_HS_DeviceDesc[USB_LEN_DEV_DESC] __ALIGN_END =
     0x12,                       /*bLength */
     USB_DESC_TYPE_DEVICE,       /*bDescriptorType*/
 #if (USBD_LPM_ENABLED == 1)
-    0x01,                       /*bcdUSB */ /* changed to USB version 2.01 
+    0x01,                       /*bcdUSB */ /* changed to USB version 2.01
                                                in order to support LPM L1 suspend
                                                resume test of USBCV3.0*/
-#else  
+#else
     0x00,                       /* bcdUSB */
 #endif
 
@@ -160,12 +160,12 @@ __ALIGN_BEGIN uint8_t USBD_HS_DeviceDesc[USB_LEN_DEV_DESC] __ALIGN_END =
     USBD_IDX_PRODUCT_STR,       /*Index of product string*/
     USBD_IDX_SERIAL_STR,        /*Index of serial number string*/
     USBD_MAX_NUM_CONFIGURATION  /*bNumConfigurations*/
-  } ; 
+  } ;
 /* USB_DeviceDescriptor */
 /* BOS descriptor */
 #if (USBD_LPM_ENABLED == 1)
 #if defined ( __ICCARM__ ) /*!< IAR Compiler */
-  #pragma data_alignment=4   
+  #pragma data_alignment=4
 #endif
 __ALIGN_BEGIN  uint8_t USBD_HS_BOSDesc[USB_SIZ_BOS_DESC] __ALIGN_END =
 {
