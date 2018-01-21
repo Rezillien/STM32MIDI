@@ -69,8 +69,9 @@ def keydown(e):
         main_keys.append(e.char)
         start_val += 1
     else:
-        if e.char == '`':
+        if e.char == '\\':
             send_sync()
+            return
         if e.char in main_keys:
             row = main_keys.index(e.char)
             active = rows[row]
@@ -86,6 +87,7 @@ def keydown(e):
         else:
             for i in rows:
                 if e.char in i:
+                    send_up(rows.index(i), 0)
                     active_keys.append(e.char)
 
 
