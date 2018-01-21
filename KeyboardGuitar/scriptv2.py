@@ -36,7 +36,7 @@ def calculate_chr(status, row, index):
 
 
 def send_up(row, index):
-    ser.write(calculate_chr(True, row, index))
+    ser.write(calculate_chr(True, row, index).encode())
     print(row, ' ', index)
 
 
@@ -51,7 +51,7 @@ def keyup(e):
 
 
 def send_down(row, index):
-    ser.write(calculate_chr(False, row, index))
+    ser.write(calculate_chr(False, row, index).encode())
     print(row, ' ', index)
 
 

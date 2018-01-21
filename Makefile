@@ -251,6 +251,13 @@ dupa:
 	sleep 1
 	bsyntetizer/gradlew
 
+run:
+	cd bsyntetizer/out/production/classes
+	cat /dev/ttyAMC0 | java Main &
+	cd ../../../..
+	cd KeyboardGuitar
+	python3 scriptv2.python	
+
 #######################################
 # dependencies
 #######################################

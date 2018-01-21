@@ -58,22 +58,26 @@ public class Main {
         while (!Thread.currentThread().isInterrupted()) {
 
             status_byte_instrument = input.next().charAt(0);//channel
-            data_byte_1_instrument = input.next().charAt(0);//instrument
+
+	    if(status_byte_instrument == 0xC2){
+
+            	data_byte_1_instrument = input.next().charAt(0);//instrument
 
 
-            player.setInstrument((int)data_byte_1_instrument);
+            	player.setInstrument((int)data_byte_1_instrument);
 
-            status_byte = input.next().charAt(0);//key on | key off
-            data_byte_1 = input.next().charAt(0);//note
-            data_byte_2 = input.next().charAt(0);//velocity
+	    } else{
+            	status_byte = status_byte_instrument;//key on | key off
+            	data_byte_1 = input.next().charAt(0);//note
+            	data_byte_2 = input.next().charAt(0);//velocity
 
-            //mockito ergo sum//
 
-            if(status_byte == 0x92){
-                player.play(data_byte_1, data_byte_2);
-            }else{
-                player.release(data_byte_1, data_byte_2);
-            }
+            	if(status_byte == 0x92){
+                	player.play(data_byte_1, data_byte_2);
+            	}else{
+                	player.release(data_byte_1, data_byte_2);
+            	}
+	    }
 
             //Thread.sleep(500);
         }
