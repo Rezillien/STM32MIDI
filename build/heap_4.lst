@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccbk9uzn.s 			page 1
+ARM GAS  /tmp/ccqdnocs.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
   64              		.thumb_func
   65              		.fpu fpv4-sp-d16
   67              	pvPortMalloc:
-ARM GAS  /tmp/ccbk9uzn.s 			page 2
+ARM GAS  /tmp/ccqdnocs.s 			page 2
 
 
   68              	.LFB5:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
   53:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c ****     including FreeRTOS+Trace - an indispensable productivity tool, a DOS
   54:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c ****     compatible FAT file system, and our tiny thread aware UDP/IP stack.
   55:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 
-ARM GAS  /tmp/ccbk9uzn.s 			page 3
+ARM GAS  /tmp/ccqdnocs.s 			page 3
 
 
   56:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c ****     http://www.FreeRTOS.org/labs - Where new FreeRTOS products go to incubate.
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  110:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** of their memory address. */
  111:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** typedef struct A_BLOCK_LINK
  112:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** {
-ARM GAS  /tmp/ccbk9uzn.s 			page 4
+ARM GAS  /tmp/ccqdnocs.s 			page 4
 
 
  113:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 	struct A_BLOCK_LINK *pxNextFreeBlock;	/*<< The next free block in the list. */
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
   80              	.LCFI1:
   81              		.cfi_def_cfa_offset 48
   82 0004 00AF     		add	r7, sp, #0
-ARM GAS  /tmp/ccbk9uzn.s 			page 5
+ARM GAS  /tmp/ccqdnocs.s 			page 5
 
 
   83              	.LCFI2:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  110              		.loc 1 183 0
  111 0030 0822     		movs	r2, #8
  112 0032 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/ccbk9uzn.s 			page 6
+ARM GAS  /tmp/ccqdnocs.s 			page 6
 
 
  113 0034 1344     		add	r3, r3, r2
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
   27:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h ****      *    FreeRTOS provides completely free yet professionally developed,    *
   28:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h ****      *    robust, strictly quality controlled, supported, and cross          *
   29:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h ****      *    platform software that is more than just the market leader, it     *
-ARM GAS  /tmp/ccbk9uzn.s 			page 7
+ARM GAS  /tmp/ccqdnocs.s 			page 7
 
 
   30:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h ****      *    is the industry's de facto standard.                               *
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
   84:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h ****  * These settings should not be altered.
   85:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h ****  *-----------------------------------------------------------
   86:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h ****  */
-ARM GAS  /tmp/ccbk9uzn.s 			page 8
+ARM GAS  /tmp/ccqdnocs.s 			page 8
 
 
   87:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** 
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  141:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** #define portSET_INTERRUPT_MASK_FROM_ISR()		ulPortRaiseBASEPRI()
  142:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** #define portCLEAR_INTERRUPT_MASK_FROM_ISR(x)	vPortSetBASEPRI(x)
  143:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** #define portDISABLE_INTERRUPTS()				vPortRaiseBASEPRI()
-ARM GAS  /tmp/ccbk9uzn.s 			page 9
+ARM GAS  /tmp/ccqdnocs.s 			page 9
 
 
  144:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** #define portENABLE_INTERRUPTS()					vPortSetBASEPRI(0)
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  198:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** 	void vPortValidateInterruptPriority( void );
  199:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** 	#define portASSERT_IF_INTERRUPT_PRIORITY_INVALID() 	vPortValidateInterruptPriority()
  200:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** #endif
-ARM GAS  /tmp/ccbk9uzn.s 			page 10
+ARM GAS  /tmp/ccqdnocs.s 			page 10
 
 
  201:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  150              	.L4:
  192:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 				}
  193:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 				else
-ARM GAS  /tmp/ccbk9uzn.s 			page 11
+ARM GAS  /tmp/ccqdnocs.s 			page 11
 
 
  194:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 				{
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  209:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 				while( ( pxBlock->xBlockSize < xWantedSize ) && ( pxBlock->pxNextFreeBlock != NULL ) )
  185              		.loc 1 209 0 is_stmt 0 discriminator 1
  186 009a 7B6A     		ldr	r3, [r7, #36]
-ARM GAS  /tmp/ccbk9uzn.s 			page 12
+ARM GAS  /tmp/ccqdnocs.s 			page 12
 
 
  187 009c 1B68     		ldr	r3, [r3]
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  218 00ce 7A6A     		ldr	r2, [r7, #36]
  219 00d0 7B68     		ldr	r3, [r7, #4]
  220 00d2 1344     		add	r3, r3, r2
-ARM GAS  /tmp/ccbk9uzn.s 			page 13
+ARM GAS  /tmp/ccqdnocs.s 			page 13
 
 
  221 00d4 BB61     		str	r3, [r7, #24]
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  249:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 					}
  250:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 
  251:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 					xFreeBytesRemaining -= pxBlock->xBlockSize;
-ARM GAS  /tmp/ccbk9uzn.s 			page 14
+ARM GAS  /tmp/ccqdnocs.s 			page 14
 
 
  262              		.loc 1 251 0
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  272:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 			else
  273:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 			{
  274:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 				mtCOVERAGE_TEST_MARKER();
-ARM GAS  /tmp/ccbk9uzn.s 			page 15
+ARM GAS  /tmp/ccqdnocs.s 			page 15
 
 
  275:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 			}
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  323              		.loc 1 301 0
  324 0164 FB69     		ldr	r3, [r7, #28]
  302:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** }
-ARM GAS  /tmp/ccbk9uzn.s 			page 16
+ARM GAS  /tmp/ccqdnocs.s 			page 16
 
 
  325              		.loc 1 302 0
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  309:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 
  310:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 	if( pv != NULL )
  375              		.loc 1 310 0
-ARM GAS  /tmp/ccbk9uzn.s 			page 17
+ARM GAS  /tmp/ccqdnocs.s 			page 17
 
 
  376 000c 7B68     		ldr	r3, [r7, #4]
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  419 0046 002B     		cmp	r3, #0
  420 0048 09D0     		beq	.L22
  421              	.LBB20:
-ARM GAS  /tmp/ccbk9uzn.s 			page 18
+ARM GAS  /tmp/ccqdnocs.s 			page 18
 
 
  422              	.LBB21:
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  333:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 					/* Add this block to the list of free blocks. */
  334:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 					xFreeBytesRemaining += pxLink->xBlockSize;
  465              		.loc 1 334 0
-ARM GAS  /tmp/ccbk9uzn.s 			page 19
+ARM GAS  /tmp/ccqdnocs.s 			page 19
 
 
  466 0088 3B69     		ldr	r3, [r7, #16]
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  506              	.LFB7:
  351:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** /*-----------------------------------------------------------*/
  352:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 
-ARM GAS  /tmp/ccbk9uzn.s 			page 20
+ARM GAS  /tmp/ccqdnocs.s 			page 20
 
 
  353:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** size_t xPortGetFreeHeapSize( void )
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  555 0000 80B4     		push	{r7}
  556              	.LCFI14:
  557              		.cfi_def_cfa_offset 4
-ARM GAS  /tmp/ccbk9uzn.s 			page 21
+ARM GAS  /tmp/ccqdnocs.s 			page 21
 
 
  558              		.cfi_offset 7, -4
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  606 0004 00BF     		nop
  607 0006 BD46     		mov	sp, r7
  608              	.LCFI20:
-ARM GAS  /tmp/ccbk9uzn.s 			page 22
+ARM GAS  /tmp/ccqdnocs.s 			page 22
 
 
  609              		.cfi_def_cfa_register 13
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  652 0016 002B     		cmp	r3, #0
  653 0018 0CD0     		beq	.L37
  382:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 	{
-ARM GAS  /tmp/ccbk9uzn.s 			page 23
+ARM GAS  /tmp/ccqdnocs.s 			page 23
 
 
  383:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 		uxAddress += ( portBYTE_ALIGNMENT - 1 );
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  691              		.loc 1 399 0
  692 0054 FB68     		ldr	r3, [r7, #12]
  693 0056 23F00703 		bic	r3, r3, #7
-ARM GAS  /tmp/ccbk9uzn.s 			page 24
+ARM GAS  /tmp/ccqdnocs.s 			page 24
 
 
  694 005a FB60     		str	r3, [r7, #12]
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  415:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 	xBlockAllocatedBit = ( ( size_t ) 1 ) << ( ( sizeof( size_t ) * heapBITS_PER_BYTE ) - 1 );
  733              		.loc 1 415 0
  734 0098 094B     		ldr	r3, .L38+20
-ARM GAS  /tmp/ccbk9uzn.s 			page 25
+ARM GAS  /tmp/ccqdnocs.s 			page 25
 
 
  735 009a 4FF00042 		mov	r2, #-2147483648
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  786              		.cfi_def_cfa_register 7
  787 0006 7860     		str	r0, [r7, #4]
  421:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** BlockLink_t *pxIterator;
-ARM GAS  /tmp/ccbk9uzn.s 			page 26
+ARM GAS  /tmp/ccqdnocs.s 			page 26
 
 
  422:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** uint8_t *puc;
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  826              	.L43:
  438:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 	}
  439:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 	else
-ARM GAS  /tmp/ccbk9uzn.s 			page 27
+ARM GAS  /tmp/ccqdnocs.s 			page 27
 
 
  440:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 	{
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  863              		.loc 1 457 0
  864 007e 0C4B     		ldr	r3, .L50+4
  865 0080 1A68     		ldr	r2, [r3]
-ARM GAS  /tmp/ccbk9uzn.s 			page 28
+ARM GAS  /tmp/ccqdnocs.s 			page 28
 
 
  866 0082 7B68     		ldr	r3, [r7, #4]
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  900              	.L51:
  901 00aa 00BF     		.align	2
  902              	.L50:
-ARM GAS  /tmp/ccbk9uzn.s 			page 29
+ARM GAS  /tmp/ccqdnocs.s 			page 29
 
 
  903 00ac 00000000 		.word	xStart
@@ -1695,45 +1695,45 @@ ARM GAS  /tmp/ccbk9uzn.s 			page 1
  915              		.file 8 "/usr/arm-none-eabi/include/stdlib.h"
  916              		.file 9 "/usr/arm-none-eabi/include/sys/_stdint.h"
  917              		.file 10 "Inc/FreeRTOSConfig.h"
-ARM GAS  /tmp/ccbk9uzn.s 			page 30
+ARM GAS  /tmp/ccqdnocs.s 			page 30
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 heap_4.c
-     /tmp/ccbk9uzn.s:18     .bss.ucHeap:0000000000000000 $d
-     /tmp/ccbk9uzn.s:21     .bss.ucHeap:0000000000000000 ucHeap
-     /tmp/ccbk9uzn.s:24     .rodata.xHeapStructSize:0000000000000000 $d
-     /tmp/ccbk9uzn.s:27     .rodata.xHeapStructSize:0000000000000000 xHeapStructSize
-     /tmp/ccbk9uzn.s:30     .bss.xStart:0000000000000000 $d
-     /tmp/ccbk9uzn.s:33     .bss.xStart:0000000000000000 xStart
-     /tmp/ccbk9uzn.s:36     .bss.pxEnd:0000000000000000 $d
-     /tmp/ccbk9uzn.s:39     .bss.pxEnd:0000000000000000 pxEnd
-     /tmp/ccbk9uzn.s:42     .bss.xFreeBytesRemaining:0000000000000000 $d
-     /tmp/ccbk9uzn.s:45     .bss.xFreeBytesRemaining:0000000000000000 xFreeBytesRemaining
-     /tmp/ccbk9uzn.s:48     .bss.xMinimumEverFreeBytesRemaining:0000000000000000 $d
-     /tmp/ccbk9uzn.s:51     .bss.xMinimumEverFreeBytesRemaining:0000000000000000 xMinimumEverFreeBytesRemaining
-     /tmp/ccbk9uzn.s:54     .bss.xBlockAllocatedBit:0000000000000000 $d
-     /tmp/ccbk9uzn.s:57     .bss.xBlockAllocatedBit:0000000000000000 xBlockAllocatedBit
-     /tmp/ccbk9uzn.s:60     .text.pvPortMalloc:0000000000000000 $t
-     /tmp/ccbk9uzn.s:67     .text.pvPortMalloc:0000000000000000 pvPortMalloc
-     /tmp/ccbk9uzn.s:626    .text.prvHeapInit:0000000000000000 prvHeapInit
-     /tmp/ccbk9uzn.s:770    .text.prvInsertBlockIntoFreeList:0000000000000000 prvInsertBlockIntoFreeList
-     /tmp/ccbk9uzn.s:338    .text.pvPortMalloc:0000000000000170 $d
-     /tmp/ccbk9uzn.s:347    .text.vPortFree:0000000000000000 $t
-     /tmp/ccbk9uzn.s:354    .text.vPortFree:0000000000000000 vPortFree
-     /tmp/ccbk9uzn.s:492    .text.vPortFree:00000000000000a8 $d
-     /tmp/ccbk9uzn.s:498    .text.xPortGetFreeHeapSize:0000000000000000 $t
-     /tmp/ccbk9uzn.s:505    .text.xPortGetFreeHeapSize:0000000000000000 xPortGetFreeHeapSize
-     /tmp/ccbk9uzn.s:536    .text.xPortGetFreeHeapSize:0000000000000014 $d
-     /tmp/ccbk9uzn.s:541    .text.xPortGetMinimumEverFreeHeapSize:0000000000000000 $t
-     /tmp/ccbk9uzn.s:548    .text.xPortGetMinimumEverFreeHeapSize:0000000000000000 xPortGetMinimumEverFreeHeapSize
-     /tmp/ccbk9uzn.s:579    .text.xPortGetMinimumEverFreeHeapSize:0000000000000014 $d
-     /tmp/ccbk9uzn.s:584    .text.vPortInitialiseBlocks:0000000000000000 $t
-     /tmp/ccbk9uzn.s:591    .text.vPortInitialiseBlocks:0000000000000000 vPortInitialiseBlocks
-     /tmp/ccbk9uzn.s:620    .text.prvHeapInit:0000000000000000 $t
-     /tmp/ccbk9uzn.s:754    .text.prvHeapInit:00000000000000ac $d
-     /tmp/ccbk9uzn.s:764    .text.prvInsertBlockIntoFreeList:0000000000000000 $t
-     /tmp/ccbk9uzn.s:903    .text.prvInsertBlockIntoFreeList:00000000000000ac $d
+     /tmp/ccqdnocs.s:18     .bss.ucHeap:0000000000000000 $d
+     /tmp/ccqdnocs.s:21     .bss.ucHeap:0000000000000000 ucHeap
+     /tmp/ccqdnocs.s:24     .rodata.xHeapStructSize:0000000000000000 $d
+     /tmp/ccqdnocs.s:27     .rodata.xHeapStructSize:0000000000000000 xHeapStructSize
+     /tmp/ccqdnocs.s:30     .bss.xStart:0000000000000000 $d
+     /tmp/ccqdnocs.s:33     .bss.xStart:0000000000000000 xStart
+     /tmp/ccqdnocs.s:36     .bss.pxEnd:0000000000000000 $d
+     /tmp/ccqdnocs.s:39     .bss.pxEnd:0000000000000000 pxEnd
+     /tmp/ccqdnocs.s:42     .bss.xFreeBytesRemaining:0000000000000000 $d
+     /tmp/ccqdnocs.s:45     .bss.xFreeBytesRemaining:0000000000000000 xFreeBytesRemaining
+     /tmp/ccqdnocs.s:48     .bss.xMinimumEverFreeBytesRemaining:0000000000000000 $d
+     /tmp/ccqdnocs.s:51     .bss.xMinimumEverFreeBytesRemaining:0000000000000000 xMinimumEverFreeBytesRemaining
+     /tmp/ccqdnocs.s:54     .bss.xBlockAllocatedBit:0000000000000000 $d
+     /tmp/ccqdnocs.s:57     .bss.xBlockAllocatedBit:0000000000000000 xBlockAllocatedBit
+     /tmp/ccqdnocs.s:60     .text.pvPortMalloc:0000000000000000 $t
+     /tmp/ccqdnocs.s:67     .text.pvPortMalloc:0000000000000000 pvPortMalloc
+     /tmp/ccqdnocs.s:626    .text.prvHeapInit:0000000000000000 prvHeapInit
+     /tmp/ccqdnocs.s:770    .text.prvInsertBlockIntoFreeList:0000000000000000 prvInsertBlockIntoFreeList
+     /tmp/ccqdnocs.s:338    .text.pvPortMalloc:0000000000000170 $d
+     /tmp/ccqdnocs.s:347    .text.vPortFree:0000000000000000 $t
+     /tmp/ccqdnocs.s:354    .text.vPortFree:0000000000000000 vPortFree
+     /tmp/ccqdnocs.s:492    .text.vPortFree:00000000000000a8 $d
+     /tmp/ccqdnocs.s:498    .text.xPortGetFreeHeapSize:0000000000000000 $t
+     /tmp/ccqdnocs.s:505    .text.xPortGetFreeHeapSize:0000000000000000 xPortGetFreeHeapSize
+     /tmp/ccqdnocs.s:536    .text.xPortGetFreeHeapSize:0000000000000014 $d
+     /tmp/ccqdnocs.s:541    .text.xPortGetMinimumEverFreeHeapSize:0000000000000000 $t
+     /tmp/ccqdnocs.s:548    .text.xPortGetMinimumEverFreeHeapSize:0000000000000000 xPortGetMinimumEverFreeHeapSize
+     /tmp/ccqdnocs.s:579    .text.xPortGetMinimumEverFreeHeapSize:0000000000000014 $d
+     /tmp/ccqdnocs.s:584    .text.vPortInitialiseBlocks:0000000000000000 $t
+     /tmp/ccqdnocs.s:591    .text.vPortInitialiseBlocks:0000000000000000 vPortInitialiseBlocks
+     /tmp/ccqdnocs.s:620    .text.prvHeapInit:0000000000000000 $t
+     /tmp/ccqdnocs.s:754    .text.prvHeapInit:00000000000000ac $d
+     /tmp/ccqdnocs.s:764    .text.prvInsertBlockIntoFreeList:0000000000000000 $t
+     /tmp/ccqdnocs.s:903    .text.prvInsertBlockIntoFreeList:00000000000000ac $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

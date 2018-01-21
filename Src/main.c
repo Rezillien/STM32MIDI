@@ -53,6 +53,8 @@
 #include "usb_device.h"
 #include "usbd_cdc_if.h"
 
+#define PRESSED_BUTTON_NONE                         0x00
+#define PRESSED_BUTTON_USER                         0x01
 /* USER CODE BEGIN Includes */
 //#include "usbd_cdc_if.h" // Plik bedacy interfejsem uzytkownika do kontrolera USB
 /* USER CODE END Includes */
@@ -578,8 +580,9 @@ int8_t CDC_Receive_HS (uint8_t* Buf, uint32_t *Len)
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
+uint8_t data_byte_1_instrument=0x01;//bass guitar
 void setupBassGuitar(){
-    uint8_t systemExlusiveSynchMessage=0xF0,synchByte=0xFF;
+    uint8_t systemExlusiveSynchMessage=0xF0,synchByte=0xF0;
 
     MessageLength = sprintf(DataToSend, "%c%c%c",systemExlusiveSynchMessage,synchByte,synchByte);
     CDC_Transmit_HS(DataToSend, MessageLength);
@@ -587,21 +590,22 @@ void setupBassGuitar(){
 
     //to robi gitare wuoncza
     uint8_t status_byte_instrument=0xC2;//MIDI channel 2
-    uint8_t data_byte_1_instrument=0x21;//bass guitar
+    
 
-    MessageLength = sprintf(DataToSend, "%c%c",status_byte_instrument,data_byte_1_instrument);
+    osDelay(10);
+    MessageLength = sprintf(DataToSend, "%c%c",status_byte_instrument,data_byte_1_instrument++);
     CDC_Transmit_HS(DataToSend, MessageLength);
 }
 
-uint8_t setupStatusByte(char keyStatus){
+uint8_t setupStatusByte(uint8_t keyStatus){
     if(keyStatus == 0){//note on
         return 0x92;
-    }else if(keyStatus == 1){//note off
+    }else{//note off
         return 0x82;
     }
 }
 
-uint8_t setupDataByte2(char row,char column){
+uint8_t setupDataByte2(uint8_t row,uint8_t column){
     return 52 + column + 5*row;
 }
 
@@ -624,7 +628,7 @@ void StartDefaultTask(void const * argument)
   {
     
 
-    uint8_t keyStatus=0, row=0, column=0,synch=0;
+    uint8_t keyStatus=0, row=0, column=0,sync=0;
     //tukej dostaje char z kosmosu
     uint8_t c=0;
     while(c==0){
@@ -637,12 +641,13 @@ void StartDefaultTask(void const * argument)
     uint8_t rowMask = 0x30;
     uint8_t columnMask = 0xF;
     
-    sync = c & syncKeyStatusMask
+    sync = c & syncKeyStatusMask;
     keyStatus = c & keyStatusMask;
     row = c & rowMask;
     column = c & columnMask;
+    row=row>>4;
 
-    if(sync==1){
+    if(sync!=0){
         setupBassGuitar();
         continue;
     }
