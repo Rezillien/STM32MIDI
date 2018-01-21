@@ -248,8 +248,6 @@ dupa:
 	make clean
 	make all
 	openocd -f openocd.cfg -c "program build/MiDi.elf verify reset exit"
-	sleep 1
-	bsyntetizer/gradlew
 
 run:
 	cd bsyntetizer/out/production/classes

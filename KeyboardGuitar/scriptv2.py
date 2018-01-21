@@ -32,12 +32,17 @@ def calculate_chr(status, row, index):
     if status:
         end_chr = end_chr + 64
     end_chr = end_chr + (row * 16) + index
-    return chr(end_chr)
+    return chr(end_chr+1)
 
 
 def send_up(row, index):
     ser.write(calculate_chr(True, row, index).encode())
     print(row, ' ', index)
+
+
+def send_sync():
+    ser.write(chr(129).encode())
+    print("sync")
 
 
 def keyup(e):
@@ -64,6 +69,8 @@ def keydown(e):
         main_keys.append(e.char)
         start_val += 1
     else:
+        if e.char == '`':
+            send_sync()
         if e.char in main_keys:
             row = main_keys.index(e.char)
             active = rows[row]

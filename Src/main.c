@@ -67,7 +67,7 @@ osThreadId defaultTaskHandle;
 
 /* USER CODE END PV */
 /* Private variables ---------------------------------------------------------*/
-uint8_t DataToSend[3]; // jeden znak midi
+uint8_t DataToSend[20]; // jeden znak midi
 uint8_t MessageCounter = 0; // Licznik wyslanych wiadomosci
 uint16_t MessageLength = 0; // Zawiera dlugosc wysylanej wiadomosci
 /* Private function prototypes -----------------------------------------------*/
@@ -579,15 +579,21 @@ int8_t CDC_Receive_HS (uint8_t* Buf, uint32_t *Len)
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 void setupBassGuitar(){
+    uint8_t systemExlusiveSynchMessage=0xF0,synchByte=0xFF;
+
+    MessageLength = sprintf(DataToSend, "%c%c%c",systemExlusiveSynchMessage,synchByte,synchByte);
+    CDC_Transmit_HS(DataToSend, MessageLength);
+
+
     //to robi gitare wuoncza
-    char status_byte_instrument=0xC2;//MIDI channel 2
-    char data_byte_1_instrument=0x21;//bass guitar
+    uint8_t status_byte_instrument=0xC2;//MIDI channel 2
+    uint8_t data_byte_1_instrument=0x21;//bass guitar
 
     MessageLength = sprintf(DataToSend, "%c%c",status_byte_instrument,data_byte_1_instrument);
     CDC_Transmit_HS(DataToSend, MessageLength);
 }
 
-char setupStatusByte(char keyStatus){
+uint8_t setupStatusByte(char keyStatus){
     if(keyStatus == 0){//note on
         return 0x92;
     }else if(keyStatus == 1){//note off
@@ -595,7 +601,7 @@ char setupStatusByte(char keyStatus){
     }
 }
 
-char setupDataByte2(char row,char column){
+uint8_t setupDataByte2(char row,char column){
     return 52 + column + 5*row;
 }
 
@@ -616,33 +622,40 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    setupBassGuitar();
+    
 
-    char keyStatus, row, column;
+    uint8_t keyStatus=0, row=0, column=0,synch=0;
     //tukej dostaje char z kosmosu
-    char c=0;
+    uint8_t c=0;
     while(c==0){
         c=readkey();
         osDelay(5);
     }
-    char keyStatusMask = 0x40;
-    char rowMask = 0x30;
-    char columnMask = 0xF;
+    c-=1;
+    uint8_t syncKeyStatusMask = 0x80;
+    uint8_t keyStatusMask = 0x40;
+    uint8_t rowMask = 0x30;
+    uint8_t columnMask = 0xF;
     
+    sync = c & syncKeyStatusMask
     keyStatus = c & keyStatusMask;
     row = c & rowMask;
     column = c & columnMask;
 
-    char status_byte;
-    char data_byte_1;
-    char data_byte_2=0x40;//velocity=64
+    if(sync==1){
+        setupBassGuitar();
+        continue;
+    }
+
+    uint8_t status_byte=0;
+    uint8_t data_byte_1=0;
+    uint8_t data_byte_2=0xFF;//velocity=64
 
     status_byte = setupStatusByte(keyStatus);
     data_byte_1 = setupDataByte2(row, column);
 
     MessageLength = sprintf(DataToSend, "%c%c%c",status_byte,data_byte_1,data_byte_2);
     CDC_Transmit_HS(DataToSend, MessageLength);
-    osDelay(500);
 
   }
   /* USER CODE END 5 */ 

@@ -2,6 +2,7 @@ import javax.sound.midi.MidiChannel;
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.MidiUnavailableException;
 import javax.sound.midi.Synthesizer;
+import java.io.FileInputStream;
 import java.util.Scanner;
 
 public class Main {
@@ -51,33 +52,53 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
+        FileInputStream in = null;
+
+        in = new FileInputStream("/dev/ttyACM0");
+        byte[] bytes = new byte[1];
+
+
+        System.out.println("blop");
         Main player = new Main();
-        Scanner input = new Scanner(System.in);
-        int i=0;
-        char status_byte_instrument, data_byte_1_instrument, status_byte, data_byte_1, data_byte_2;
+        boolean flag = true;
+        int status_byte_instrument, data_byte_1_instrument, status_byte, data_byte_1, data_byte_2;
         while (!Thread.currentThread().isInterrupted()) {
 
-            status_byte_instrument = input.next().charAt(0);//channel
+            status_byte_instrument =in.read();//channel
 
-	    if(status_byte_instrument == 0xC2){
+            while(flag){
+                if(status_byte_instrument == 0xF0) {
+                    data_byte_1 = in.read();//note
+                    data_byte_2 = in.read();//velocity
+                    if (!(data_byte_1 == 0xFF && data_byte_2 == 0xFF)) {
+                        continue;
+                    }
+                    flag = false;
+                    status_byte_instrument = in.read();//channel
+                }
+            }
 
-            	data_byte_1_instrument = input.next().charAt(0);//instrument
+	        if(status_byte_instrument == 0xC2){
+
+                data_byte_1_instrument = in.read();//instrument
 
 
-            	player.setInstrument((int)data_byte_1_instrument);
+                player.setInstrument(data_byte_1_instrument);
+                System.out.println("status " + status_byte_instrument + " " + data_byte_1_instrument);
 
-	    } else{
-            	status_byte = status_byte_instrument;//key on | key off
-            	data_byte_1 = input.next().charAt(0);//note
-            	data_byte_2 = input.next().charAt(0);//velocity
+	        } else if(status_byte_instrument == 0x92 || status_byte_instrument == 0x82){
+                status_byte = status_byte_instrument;//key on | key off
+                data_byte_1 = in.read();//note
+                data_byte_2 = in.read();//velocity
 
 
-            	if(status_byte == 0x92){
-                	player.play(data_byte_1, data_byte_2);
-            	}else{
-                	player.release(data_byte_1, data_byte_2);
-            	}
-	    }
+                if(status_byte == 0x92) {
+                    player.play(data_byte_1, data_byte_2);
+                }else {
+                    player.release(data_byte_1, data_byte_2);
+                }
+                System.out.println("note " + status_byte + " " + data_byte_1 + " " + data_byte_2);
+	        }
 
             //Thread.sleep(500);
         }
