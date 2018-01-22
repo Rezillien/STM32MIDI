@@ -232,8 +232,6 @@ $(BUILD_DIR):
 # clean up
 #######################################
 
-program:
-	C:\Program Files\STMicroelectronics\STM32 ST-LINK Utility\ST-LINK Utility\ST-LINK_CLI.exe -c SWD -ME -P build/MiDi.hex -Rst
 	
 flash:
 	st-flash erase
@@ -244,10 +242,15 @@ clean:
 	-rm -fR .dep $(BUILD_DIR)
   
 
-dupa:
+midiGreatAgain:
 	make clean
 	make all
 	openocd -f openocd.cfg -c "program build/MiDi.elf verify reset exit"
+
+configure:
+	sudo configure.sh /dev/ttyACM0 /dev/ttyUSB0
+	#default configuration no additional devices are connected
+	
 
 run:
 	cd bsyntetizer/out/production/classes

@@ -580,21 +580,22 @@ int8_t CDC_Receive_HS (uint8_t* Buf, uint32_t *Len)
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
-uint8_t data_byte_1_instrument=0x01;//bass guitar
-void setupBassGuitar(){
-    uint8_t systemExlusiveSynchMessage=0xF0,synchByte=0xF0;
 
-    MessageLength = sprintf(DataToSend, "%c%c%c",systemExlusiveSynchMessage,synchByte,synchByte);
-    CDC_Transmit_HS(DataToSend, MessageLength);
+void setupBassGuitar(uint8_t data_byte_1_instrument){
+    uint8_t systemExlusiveSyncMessage=0xF0,syncByte=0xF0; //work around problem with 2 byte messages
+
+    //MessageLength = sprintf(DataToSend, "%c%c%c",systemExlusiveSyncMessage,syncByte,syncByte);
+    //CDC_Transmit_HS(DataToSend, MessageLength);
 
 
-    //to robi gitare wuoncza
     uint8_t status_byte_instrument=0xC2;//MIDI channel 2
     
-
+    
     osDelay(10);
-    MessageLength = sprintf(DataToSend, "%c%c",status_byte_instrument,data_byte_1_instrument++);
+    MessageLength = sprintf(DataToSend, "%c%c%c",status_byte_instrument,data_byte_1_instrument,0x02);
     CDC_Transmit_HS(DataToSend, MessageLength);
+
+    
 }
 
 uint8_t setupStatusByte(uint8_t keyStatus){
@@ -610,17 +611,13 @@ uint8_t setupDataByte2(uint8_t row,uint8_t column){
 }
 
 
-/* USER CODE BEGIN 4 */
-
-/* USER CODE END 4 */
-
 /* StartDefaultTask function */
 void StartDefaultTask(void const * argument)
 {
   /* init code for USB_DEVICE */
   MX_USB_DEVICE_Init();
 
-
+  uint8_t data_byte_1_instrument=0x01;//piano and starting point
 
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
@@ -628,33 +625,52 @@ void StartDefaultTask(void const * argument)
   {
     
 
-    uint8_t keyStatus=0, row=0, column=0,sync=0;
-    //tukej dostaje char z kosmosu
+    uint8_t keyStatus=0, row=0, column=0,system=0;
+    
     uint8_t c=0;
-    while(c==0){
-        c=readkey();
+    while(c==0){ 
+        c=readkey();  //readkey is non blocking function
         osDelay(5);
+
     }
-    c-=1;
+    c-=1;//real c = c - 1 because there is problem when c == 0
+
+    /*
+    c=ABCCDDDDb
+    A   -> if A == 1 it's system message 
+           else row and column on guitar
+    B   -> key on or off
+    CC  -> row index
+    DDDD-> column index
+    */
     uint8_t syncKeyStatusMask = 0x80;
     uint8_t keyStatusMask = 0x40;
     uint8_t rowMask = 0x30;
     uint8_t columnMask = 0xF;
     
-    sync = c & syncKeyStatusMask;
+    system = (c & syncKeyStatusMask);
     keyStatus = c & keyStatusMask;
     row = c & rowMask;
     column = c & columnMask;
-    row=row>>4;
+    row = row >> 4;
 
-    if(sync!=0){
-        setupBassGuitar();
+    //0x80 -> instrument++
+    //0x81 -> instrument--
+    
+
+
+    if(system!=0){
+	if(c == (uint8_t)0x80)
+            data_byte_1_instrument=(data_byte_1_instrument+1)%0x80;
+        else if(c == (uint8_t)0x81)
+            data_byte_1_instrument=(data_byte_1_instrument-1)%0x80;
+        setupBassGuitar(data_byte_1_instrument);
         continue;
     }
 
     uint8_t status_byte=0;
     uint8_t data_byte_1=0;
-    uint8_t data_byte_2=0xFF;//velocity=64
+    uint8_t data_byte_2=0x7F;
 
     status_byte = setupStatusByte(keyStatus);
     data_byte_1 = setupDataByte2(row, column);

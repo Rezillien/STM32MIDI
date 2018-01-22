@@ -4,7 +4,7 @@ import serial
 import os
 
 
-ser = serial.Serial('/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A702HE61-if00-port0', 115200)  # open serial port
+ser = serial.Serial('/dev/ttyUSB0', 115200)  # open serial port
 
 bass_num = 33
 
@@ -40,9 +40,13 @@ def send_up(row, index):
     print(row, ' ', index)
 
 
-def send_sync():
-    ser.write(chr(129).encode())
-    print("sync")
+def send_control(key):
+    if key == '+':
+        ser.write(chr(129).encode())
+        print("instrument up")
+    elif key == '-':
+        ser.write(chr(130).encode())
+        print("instrument down")
 
 
 def keyup(e):
@@ -69,8 +73,8 @@ def keydown(e):
         main_keys.append(e.char)
         start_val += 1
     else:
-        if e.char == '\\':
-            send_sync()
+        if e.char == '+' or e.char == '-':
+            send_control(e.char)
             return
         if e.char in main_keys:
             row = main_keys.index(e.char)
