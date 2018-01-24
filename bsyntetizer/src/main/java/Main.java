@@ -74,20 +74,17 @@ public class Main {
             status_byte_instrument =ubytes[0];//channel
 
 //            while(flag){
-                if(status_byte_instrument == 0xF0) {
+                if(status_byte_instrument == 0xC2) {
                     System.out.println("sync");
                     data_byte_1 = ubytes[1];//note
 
                     data_byte_2 = ubytes[2];//velocity
-                    if (!(data_byte_1 == 0xF0 && data_byte_2 == 0xF0)) {
-                        continue;
-                    }
                     player.stop();
 //                    flag = false;
-                    bytes = new byte[2];
-                    in.read(bytes);
-                    ubytes[1]=((byte)(bytes[1]-128))+128;
-                    ubytes[0]=((byte)(bytes[0]-128))+128;
+//                    bytes = new byte[2];
+//                    in.read(bytes);
+//                    ubytes[1]=((byte)(bytes[1]-128))+128;
+//                    ubytes[0]=((byte)(bytes[0]-128))+128;
                     status_byte_instrument = ubytes[0];//channel
 
                     data_byte_1_instrument = ubytes[1];//instrument
