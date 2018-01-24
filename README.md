@@ -14,10 +14,14 @@
 ```
 clone project and go to main directory
 make program
-./connect.sh
 ```
 
-### Additional info
-Project include sample instrument script that use uart to send data to stm. See KeyboardGuitar directory or run ./guitar.sh
+### Running
+Project include sample instrument script that use uart to send data to stm.
+To run demo:
+```
+./guitar.sh
+./connect.sh
+```
 
 
