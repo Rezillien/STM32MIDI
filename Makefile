@@ -233,11 +233,6 @@ $(BUILD_DIR):
 #######################################
 
 	
-flash:
-	st-flash erase
-	st-flash write build/MiDi.hex 0x8000000
-	st-flash reset
-
 clean:
 	-rm -fR .dep $(BUILD_DIR)
   
@@ -247,17 +242,7 @@ midiGreatAgain:
 	make all
 	openocd -f openocd.cfg -c "program build/MiDi.elf verify reset exit"
 
-configure:
-	sudo configure.sh /dev/ttyACM0 /dev/ttyUSB0
-	#default configuration no additional devices are connected
-	
 
-run:
-	cd bsyntetizer/out/production/classes
-	cat /dev/ttyAMC0 | java Main &
-	cd ../../../..
-	cd KeyboardGuitar
-	python3 scriptv2.python	
 
 #######################################
 # dependencies

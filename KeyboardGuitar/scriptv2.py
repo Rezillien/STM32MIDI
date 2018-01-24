@@ -4,7 +4,8 @@ import serial
 import os
 
 
-ser = serial.Serial('/dev/ttyUSB0', 115200)  # open serial port
+
+ser = serial.Serial("/dev/ttyUSB0", 115200)  # open serial port
 
 bass_num = 33
 
@@ -73,7 +74,7 @@ def keydown(e):
         main_keys.append(e.char)
         start_val += 1
     else:
-        if e.char == '+' or e.char == '-':
+        if e.char == '+':
             send_control(e.char)
             return
         if e.char in main_keys:

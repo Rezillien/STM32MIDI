@@ -53,8 +53,7 @@
 #include "usb_device.h"
 #include "usbd_cdc_if.h"
 
-#define PRESSED_BUTTON_NONE                         0x00
-#define PRESSED_BUTTON_USER                         0x01
+
 /* USER CODE BEGIN Includes */
 //#include "usbd_cdc_if.h" // Plik bedacy interfejsem uzytkownika do kontrolera USB
 /* USER CODE END Includes */
@@ -69,9 +68,8 @@ osThreadId defaultTaskHandle;
 
 /* USER CODE END PV */
 /* Private variables ---------------------------------------------------------*/
-uint8_t DataToSend[20]; // jeden znak midi
-uint8_t MessageCounter = 0; // Licznik wyslanych wiadomosci
-uint16_t MessageLength = 0; // Zawiera dlugosc wysylanej wiadomosci
+uint8_t DataToSend[20]; // data buffer
+uint16_t MessageLength = 0;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
@@ -82,14 +80,109 @@ ssize_t _write_r(struct _reent*, int, const void*, size_t);
 int8_t CDC_Receive_FS (uint8_t*, uint32_t*);
 char readkey(void);
 
-/* USER CODE BEGIN PFP */
-/* Private function prototypes -----------------------------------------------*/
+/////////////////////////////////////////////////////////////////////////////////////////////
+//our code begin
+void setupBassGuitar(uint8_t data_byte_1_instrument){
+    uint8_t systemExlusiveSyncMessage=0xF0,syncByte=0xF0; //work around problem with 2 byte messages
 
-/* USER CODE END PFP */
 
-/* USER CODE BEGIN 0 */
 
-/* USER CODE END 0 */
+    uint8_t status_byte_instrument=0xC2;//MIDI channel 2
+    
+    
+    osDelay(10);
+    MessageLength = sprintf(DataToSend, "%c%c%c",status_byte_instrument,data_byte_1_instrument,0x02);
+    CDC_Transmit_HS(DataToSend, MessageLength);
+
+    
+}
+
+uint8_t setupStatusByte(uint8_t keyStatus){
+    if(keyStatus == 0){//note on
+        return 0x92;
+    }else{//note off
+        return 0x82;
+    }
+}
+
+uint8_t setupDataByte2(uint8_t row,uint8_t column){
+    return 52 + column + 5*row;
+}
+
+
+void midiConvert()
+{
+  uint8_t data_byte_1_instrument=0x21;//bass guitar and starting point
+
+  /* USER CODE BEGIN 5 */
+  /* Infinite loop */
+  for(;;)
+  {
+    
+
+    uint8_t keyStatus=0, row=0, column=0,system=0;
+    
+    uint8_t c=0;
+    while(c==0){ 
+        c=readkey();  //readkey is non blocking function
+        osDelay(5);
+
+    }
+    c-=1;//real c = c - 1 because there is problem when c == 0
+
+    /*
+    c=ABCCDDDDb
+    A   -> if A == 1 it's system message 
+           else row and column on guitar
+    B   -> key on or off
+
+    CC  -> row index
+    DDDD-> column index
+    */
+    uint8_t syncKeyStatusMask = 0x80;
+    uint8_t keyStatusMask = 0x40;
+    uint8_t rowMask = 0x30;
+    uint8_t columnMask = 0xF;
+    
+    system = (c & syncKeyStatusMask);
+    keyStatus = c & keyStatusMask;
+    row = c & rowMask;
+    column = c & columnMask;
+    row = row >> 4;
+
+    //0x80 -> instrument++
+    //0x81 -> instrument--
+    
+
+
+    if(system!=0){
+	if(c == (uint8_t)0x80)
+
+            data_byte_1_instrument=(data_byte_1_instrument+1)%0x80;
+        else if(c == (uint8_t)0x81)
+            data_byte_1_instrument=(data_byte_1_instrument-1)%0x80;
+        setupBassGuitar(data_byte_1_instrument);
+        continue;
+    }
+
+    uint8_t status_byte=0;
+    uint8_t data_byte_1=0;
+    uint8_t data_byte_2=0x7F;
+
+    status_byte = setupStatusByte(keyStatus);
+    data_byte_1 = setupDataByte2(row, column);
+
+    MessageLength = sprintf(DataToSend, "%c%c%c",status_byte,data_byte_1,data_byte_2);
+    CDC_Transmit_HS(DataToSend, MessageLength);
+
+  }
+
+}
+
+
+
+
+
 
 int main(void)
 {
@@ -161,8 +254,6 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 
-    printf("test\n");
-    osDelay(100);
   }
   /* USER CODE END 3 */
 
@@ -565,10 +656,6 @@ int8_t CDC_Receive_HS (uint8_t* Buf, uint32_t *Len)
     //USBD_CDC_ReceivePacket(hUsbDevice_0);// Tell that you are ready to receive the next packet, otherwise you wouldn't be able to receive next data
 
 
-    //printf("recived");
-    MessageLength = sprintf(DataToSend, "recived\n", MessageCounter);
-    CDC_Transmit_HS(DataToSend, MessageLength);
-    //osDelay(1);
  
      return USBD_OK;
       
@@ -581,34 +668,7 @@ int8_t CDC_Receive_HS (uint8_t* Buf, uint32_t *Len)
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 
-void setupBassGuitar(uint8_t data_byte_1_instrument){
-    uint8_t systemExlusiveSyncMessage=0xF0,syncByte=0xF0; //work around problem with 2 byte messages
 
-    //MessageLength = sprintf(DataToSend, "%c%c%c",systemExlusiveSyncMessage,syncByte,syncByte);
-    //CDC_Transmit_HS(DataToSend, MessageLength);
-
-
-    uint8_t status_byte_instrument=0xC2;//MIDI channel 2
-    
-    
-    osDelay(10);
-    MessageLength = sprintf(DataToSend, "%c%c%c",status_byte_instrument,data_byte_1_instrument,0x02);
-    CDC_Transmit_HS(DataToSend, MessageLength);
-
-    
-}
-
-uint8_t setupStatusByte(uint8_t keyStatus){
-    if(keyStatus == 0){//note on
-        return 0x92;
-    }else{//note off
-        return 0x82;
-    }
-}
-
-uint8_t setupDataByte2(uint8_t row,uint8_t column){
-    return 52 + column + 5*row;
-}
 
 
 /* StartDefaultTask function */
@@ -617,68 +677,8 @@ void StartDefaultTask(void const * argument)
   /* init code for USB_DEVICE */
   MX_USB_DEVICE_Init();
 
-  uint8_t data_byte_1_instrument=0x01;//piano and starting point
-
-  /* USER CODE BEGIN 5 */
-  /* Infinite loop */
-  for(;;)
-  {
-    
-
-    uint8_t keyStatus=0, row=0, column=0,system=0;
-    
-    uint8_t c=0;
-    while(c==0){ 
-        c=readkey();  //readkey is non blocking function
-        osDelay(5);
-
-    }
-    c-=1;//real c = c - 1 because there is problem when c == 0
-
-    /*
-    c=ABCCDDDDb
-    A   -> if A == 1 it's system message 
-           else row and column on guitar
-    B   -> key on or off
-    CC  -> row index
-    DDDD-> column index
-    */
-    uint8_t syncKeyStatusMask = 0x80;
-    uint8_t keyStatusMask = 0x40;
-    uint8_t rowMask = 0x30;
-    uint8_t columnMask = 0xF;
-    
-    system = (c & syncKeyStatusMask);
-    keyStatus = c & keyStatusMask;
-    row = c & rowMask;
-    column = c & columnMask;
-    row = row >> 4;
-
-    //0x80 -> instrument++
-    //0x81 -> instrument--
-    
-
-
-    if(system!=0){
-	if(c == (uint8_t)0x80)
-            data_byte_1_instrument=(data_byte_1_instrument+1)%0x80;
-        else if(c == (uint8_t)0x81)
-            data_byte_1_instrument=(data_byte_1_instrument-1)%0x80;
-        setupBassGuitar(data_byte_1_instrument);
-        continue;
-    }
-
-    uint8_t status_byte=0;
-    uint8_t data_byte_1=0;
-    uint8_t data_byte_2=0x7F;
-
-    status_byte = setupStatusByte(keyStatus);
-    data_byte_1 = setupDataByte2(row, column);
-
-    MessageLength = sprintf(DataToSend, "%c%c%c",status_byte,data_byte_1,data_byte_2);
-    CDC_Transmit_HS(DataToSend, MessageLength);
-
-  }
+  midiConvert();
+  
   /* USER CODE END 5 */ 
 }
 
